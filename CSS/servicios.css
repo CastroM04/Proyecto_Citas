@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,500&display=swap');
+
+.contenedor{
+    max-width: 95%;
+    padding: 30px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    contain: paint;
+    background-color: none;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 30px;
+    margin-bottom: 40px;
+}
+
+.contenedor .contenedor-items{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 30px;
+    grid-row-gap: 30px;
+    width: 100%;
+    transition: .3s;
+}
+.contenedor .contenedor-items .item{
+    max-width: 220px;
+    padding: 10px;
+    margin: auto;
+    border: 1px solid #ccbebe;
+    border-radius: 10px;
+    padding: 30px;
+    transition: .3s;
+    width: calc(100% - 10%); 
+    color: #000000;
+    background-color: #fff;
+    border-radius: 15px;   
+}
+.contenedor-items .item:hover{
+    box-shadow: 0 0 10px #666;
+    scale: 1.05;
+}
+.contenedor-items .item .img-item{
+    display: block;
+    text-align: center;
+}
+.contenedor-items .item .precio-item{
+    display: block;
+    text-align: center;
+    font-size: 22px;
+}
+.contenedor-items .item .titulo-item{
+    display: block;
+    text-align: center;
+    font-size: 19px;
+}
+.contenedor-items .item .boton-item{
+    display: block;
+    margin: 10px auto;
+    border: none;
+    background: black;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contenedor-items .item .boton-item{
+    display: block;
+    margin: 10px auto;
+    border: none;
+    background: rgba(63, 124, 121, 0.664);
+    color: #000;
+    padding: 5px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+img{
+    width: 140px;
+    height: 70px;
+    border-radius: 10px;
+}
+button{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+

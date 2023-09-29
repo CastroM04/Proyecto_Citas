@@ -1,0 +1,38 @@
+ /* Diseño de tabla 
+ table {
+    background-color: #f2f2f2d3;
+    border-radius: 30px;
+    margin-left: 10px;
+    width: 90%;
+
+}
+
+/* Columnas y filas 
+th,
+td {
+    border: 1px solid gray;
+    padding: 13px 50px;
+    text-align: center;
+}
+
+/* Borde lado izquierdo 
+.borde1{
+    border-left: none;
+}
+/* Borde lado derecho 
+.borde2{
+    border-right: none;
+}
+
+.Selecciona{
+    
+    color: transparent;
+    padding: 4px 2px;
+    border-radius: 30px;
+}
+  .Selecciona:hover{
+    color: black;
+    cursor: pointer;
+
+  
+}
