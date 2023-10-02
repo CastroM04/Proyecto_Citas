@@ -458,6 +458,7 @@ if ($TipoUser == "Admin") {
                                         <td><?php echo $row['Correo']; ?></td>
                                         <td><?php echo $row['FK_Estado']; ?></td>
                                         <td>
+                                            <a href="dashboard.php?Actualizar=true&id=<?php echo $id; ?>" class="btn btn-outline-info mb-2" style="border-radius: 100%;">
                                                 <i class="fa-solid fa-pen"></i>
                                             </a>
 
