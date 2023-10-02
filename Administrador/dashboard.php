@@ -207,6 +207,7 @@ if ($TipoUser == "Admin") {
 
         .modal-content {
             padding: 20px;
+
         }
 
         body {
@@ -223,11 +224,11 @@ if ($TipoUser == "Admin") {
         .modal {
 
             position: absolute;
-            width: 50%;
+            width: 60%;
             margin-top: 130px;
             margin-left: 25%;
             border-radius: 30px;
-
+      overflow-y: auto;
         }
 
         .formulario {
@@ -457,11 +458,10 @@ if ($TipoUser == "Admin") {
                                         <td><?php echo $row['Correo']; ?></td>
                                         <td><?php echo $row['FK_Estado']; ?></td>
                                         <td>
-                                            <a href="dashboard.php?Actualizar=true&id=<?php echo $id; ?>" class="btn btn-outline-info" style="border-radius: 100%;">
                                                 <i class="fa-solid fa-pen"></i>
                                             </a>
 
-                                            <a href="Confirmaciones.php?Confirmacion=true&id=<?php echo $row['PK_codigo_pe'] ?>&accion=Eliminar&entidad=Empleados" class="btn btn-outline-danger" style="border-radius: 100%;"> <i class="fa-solid fa-trash"></i></a>
+                                            <a href="Confirmaciones.php?Confirmacion=true&id=<?php echo $row['PK_codigo_pe'] ?>&accion=Eliminar&entidad=Empleados" class="btn btn-outline-danger mb-2" style="border-radius: 100%;"> <i class="fa-solid fa-trash"></i></a>
 
                                         </td>
 
