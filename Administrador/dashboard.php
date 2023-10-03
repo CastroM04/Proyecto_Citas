@@ -228,7 +228,7 @@ if ($TipoUser == "Admin") {
             margin-top: 130px;
             margin-left: 25%;
             border-radius: 30px;
-      overflow-y: auto;
+            overflow-y: auto;
         }
 
         .formulario {
@@ -356,6 +356,13 @@ if ($TipoUser == "Admin") {
 
         #FormProductosAc {
             display: inline-flex;
+        }
+
+        /* Para ocultar los botones de incremento y decremento en todos los navegadores */
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
         }
     </style>
 </head>
@@ -582,6 +589,8 @@ if ($TipoUser == "Admin") {
 
                                 <td>Nombres</td>
                                 <td>Nombre de Usuario</td>
+                                <td>Tipo Documento</td>
+                                <td>No. Documento</td>
                                 <td>Correo</td>
                                 <td>Numero</td>
                                 <td>Genero</td>
@@ -590,7 +599,7 @@ if ($TipoUser == "Admin") {
 
 
                             <?php
-                            $Consultar = $link->query("SELECT U.ID, TU.Nombres, U.Nombre_usuario, U.Correo, TU.Numero, TU.Genero, TU.PK_codigo_us
+                            $Consultar = $link->query("SELECT U.ID, TU.Nombres, U.Nombre_usuario, TU.tp_documento, TU.N_identificacion, U.Correo, TU.Numero, TU.Genero, TU.PK_codigo_us
                                     FROM  tbl_usuario as TU
                                     JOIN usuarios AS U ON (TU.PK_codigo_us = U.FK_usuarios)");
 
@@ -599,6 +608,8 @@ if ($TipoUser == "Admin") {
 
                                 $nombres = $row['Nombres'];
                                 $username = $row['Nombre_usuario'];
+                                $tp_documento = $row['tp_documento'];
+                                $N_identificacion = $row['N_identificacion'];
                                 $genero = $row['Genero'];
                                 $numero = $row['Numero'];
                                 $correo = $row['Correo'];
@@ -611,6 +622,15 @@ if ($TipoUser == "Admin") {
                                         <form action="usuarios.php?id=<?php echo $_GET['id']; ?>" method="post">
                                             <td> <input type="text" name="Nombres" class="form-control" value="<?php echo $nombres; ?>" placeholder="Nombres"></td>
                                             <td><input type="text" name="Username" class="form-control" value="<?php echo $username; ?>" placeholder="usuario"></td>
+                                            <td>
+                                                <select name="tp_documento" id="tp_documento" class="form-select" style="height: 50px;width: 200px;">
+                                                    <option value="0">SELECCIONAR</option>
+                                                    <option value="CC">CEDULA CIUDADANIA</option>
+                                                    <option value="TI">Tarjeta De Identidad</option>
+                                                    <option value="CE">Cedula Extranjera</option>
+                                                </select>
+                                            </td>
+                                            <td><input type="text" name="N_identificacion" class="form-control" readonly value="<?php echo $N_identificacion; ?>" placeholder="N_identificacion"></td>
                                             <td> <input type="email" name="Correo" class="form-control" value="<?php echo $correo; ?>" placeholder="Correo electrónico"></td>
                                             <td><input type="text" name="Numero" class="form-control" value="<?php echo $numero; ?>" placeholder="Número"></td>
                                             <td>
@@ -643,6 +663,8 @@ if ($TipoUser == "Admin") {
 
                                         <td><?php echo $row['Nombres']; ?></td>
                                         <td><?php echo $row['Nombre_usuario']; ?></td>
+                                        <td><?php echo $row['tp_documento']; ?></td>    
+                                        <td><?php echo $row['N_identificacion']; ?></td>
                                         <td><?php echo $row['Correo']; ?></td>
                                         <td><?php echo $row['Numero']; ?></td>
                                         <td><?php echo $row['Genero']; ?></td>
@@ -716,7 +738,6 @@ if ($TipoUser == "Admin") {
                                             </td>
                                             <td>
                                                 <select name="tipoId" id="tipoId" class="form-select" style="height: 50px;">
-
                                                     <option value="30">CEDULA CIUDADANIA</option>
                                                     <option value="32">PASAPORTE</option>
                                                     <option value="31">NIT</option>
@@ -816,7 +837,7 @@ if ($TipoUser == "Admin") {
                                 $consultaCitas = $link->query("SELECT TC.PK_codigo_ci, TS.Descripcion, TS.valor_servicio, TU.Nombres AS Nombres_us, TP.Nombres, TC.Fecha_Hora, TE.nombre_estado
                                 FROM tbl_cita AS TC
                                 JOIN tbl_servicio AS TS ON TC.FK_codigo_se = TS.PK_codigo_se
-                                JOIN tbl_usuario AS TU ON TC.FK_codigo_us = TU.PK_codigo_us
+                                JOIN tbl_usuario AS TU ON TC.N_identificacion = TU.N_identificacion
                                 JOIN tbl_personal AS TP ON TC.FK_codigo_pe = TP.PK_codigo_pe
                                 JOIN tbl_estado AS TE ON TC.Estado_Cita = TE.PK_estado
                                 WHERE TC.FK_codigo_pe = '$PrimaryUser'");
@@ -900,7 +921,7 @@ if ($TipoUser == "Admin") {
                                 $consultaCitas = $link->query("SELECT TC.PK_codigo_ci ,TS.Descripcion, TS.valor_servicio, TU.Nombres AS Nombres_us, TP.Nombres, TC.Fecha_Hora, TE.nombre_estado
                                 FROM tbl_cita AS TC
                                 JOIN tbl_servicio AS TS ON TC.FK_codigo_se = TS.PK_codigo_se
-                                JOIN tbl_usuario AS TU ON TC.FK_codigo_us = TU.PK_codigo_us
+                                JOIN tbl_usuario AS TU ON TC.N_identificacion = TU.N_identificacion
                                 JOIN tbl_personal AS TP ON TC.FK_codigo_pe = TP.PK_codigo_pe
                                 JOIN tbl_estado AS TE ON TC.Estado_Cita = TE.PK_estado;");
 
@@ -1031,8 +1052,8 @@ if ($TipoUser == "Admin") {
 
                                     </select>
 
-                                    <label for="identificacion" class="form-label">Codigo Usario</label>
-                                    <input type="text" name="FK_codigo_us" id="FK_codigo_us" class="form-control" required>
+                                    <label for="identificacion" class="form-label">No. Documento del Usario</label>
+                                    <input type="text" name="N_identificacion" id="N_identificacion" class="form-control" required>
 
                                     <button type="submit" name="RegistrarCita" class="btn btn-outline-dark mt-5">Agregar Cita</button>
                                     <button onclick="cerrarCita()" class="btn btn-outline-danger" style="position: relative; top: 23px; left: 10px; height: 40px;">Cerrar</button>
@@ -1592,6 +1613,14 @@ if ($TipoUser == "Admin") {
                         <h4 class="display-5">Agregar Usuario</h4>
                         <label for="Nombre" class="form-label">Nombre</label>
                         <input type="text" class="form-control" name="Nombre" id="Nombre" required>
+                        <label for="tp_documento">Tipo documento</label>
+                        <select name="tp_documento" id="tp_documento" class="form-select" style="height: 50px;width: 200px;">
+                            <option value="CC">Cedula Ciudadania</option>
+                            <option value="TI">Tarjeta de Identidad</option>
+                            <option value="CE">Cédula de Extranjería</option>
+                        </select>
+                        <label for="N_identificacion" class="form-label">N_identificacion</label>
+                        <input type="number" class="form-control" name="N_identificacion" id="identificacion" required>
                         <label for="Genero">Genero</label>
                         <select name="Genero" id="Genero" class="form-select" style="height: 50px;width: 200px;">
                             <option value="M">Masculino</option>
