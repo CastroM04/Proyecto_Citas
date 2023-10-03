@@ -4,31 +4,35 @@ include("../includes/session.php");
 
 if (isset($_POST['RegistrarCita'])) {
     $FK_codigo_se = $_POST['FK_codigo_se'];
-    $FK_codigo_us = $_POST['FK_codigo_us'];
+    $N_identificacion = $_POST['N_identificacion'];
     $FK_codigo_pe = $_POST['FK_codigo_pe'];
     $Fecha_Hora = $_POST['Fecha_Hora'];
     $Estado_Cita = '3';
 
-    
-    $verificarUsuario = $link->query("SELECT * FROM tbl_usuario WHERE PK_codigo_us = $FK_codigo_us");
+    $fechaHoraActual = date('Y-m-d H:i:s'); // Obtener la hora actual
+    if (strtotime($Fecha_Hora) < strtotime($fechaHoraActual)) {
+        header("location: dashboard.php?citas=true&message=Ingrese una fecha valida.&message_type=danger");
+        exit; // Para que no se siga ejecutando el script
+    }
 
-    if ($verificarUsuario->num_rows > 0) { 
-        if (!empty($FK_codigo_se) && !empty($FK_codigo_us) && !empty($FK_codigo_pe) && !empty($Fecha_Hora) && !empty($Estado_Cita)) {
-            $Insertar = $link->query("INSERT INTO tbl_cita (FK_codigo_se, FK_codigo_us, FK_codigo_pe, Fecha_Hora, Estado_Cita) 
-            VALUES ($FK_codigo_se, $FK_codigo_us, $FK_codigo_pe, '$Fecha_Hora', '$Estado_Cita')");
+    $verificarUsuario = $link->query("SELECT * FROM tbl_usuario WHERE N_identificacion = $N_identificacion");
 
-        if ($Insertar) {
-            header("location: dashboard.php?citas=true&message=La cita ha sido guardada exitosamente&message_type=success");
-        } else {
-            
-            echo "Error al agregar la cita: " . $link->error;
+    if ($verificarUsuario->num_rows > 0) {
+        if (!empty($FK_codigo_se) && !empty($N_identificacion) && !empty($FK_codigo_pe) && !empty($Fecha_Hora) && !empty($Estado_Cita)) {
+            $Insertar = $link->query("INSERT INTO tbl_cita (FK_codigo_se, N_identificacion, FK_codigo_pe, Fecha_Hora, Estado_Cita) 
+            VALUES ($FK_codigo_se, $N_identificacion, $FK_codigo_pe, '$Fecha_Hora', '$Estado_Cita')");
 
-        }
+            if ($Insertar) {
+                header("location: dashboard.php?citas=true&message=La cita ha sido guardada exitosamente&message_type=success");
+            } else {
+                echo "Error al agregar la cita: " . $link->error;
+            }
         }
     } else {
-        header("location: dashboard.php?citas=true&message=El usuario con el código $FK_codigo_us no existe. No se puede guardar la cita.&message_type=danger");
+        header("location: dashboard.php?citas=true&message=El usuario con la identificacion: $N_identificacion no existe. No se puede guardar la cita.&message_type=danger");
     }
 }
+
 
 
 /* Eliminar Cita */

@@ -9,38 +9,49 @@ $nombres = "";
 $nombre_usuario = "";
 $telefono = "";
 $genero = "";
+$identificacion = "";
+$tp_documento = "";
 
 // Función Registrar
 if (isset($_REQUEST['Registrar'])) {
     $nombres = $_REQUEST['nombres'];
     $nombre_usuario = $_REQUEST['nombreUS'];
+    $identificacion = $_REQUEST['identificacion'];
     $correoR = $_REQUEST['correoR'];
     $passwordR = $_REQUEST['passwordR'];
     $telefono = $_REQUEST['telefonoR'];
     $genero = $_REQUEST['genero'];
+    $tp_documento = $_REQUEST['tp_documento'];
 
-    if (!empty($nombres) && !empty($correoR) && !empty($passwordR) && !empty($telefono) && !empty($genero) && !empty($nombre_usuario)) {
-        $validacion = $link->query("SELECT * FROM usuarios where Correo='$correoR'");
-        $validacionEmpleadoAdmin = $link->query("SELECT * FROM empleados WHERE Correo='$correoR' AND FK_rol='33' OR FK_rol='34'");
+    if (!empty($nombres) && !empty($identificacion) && !empty($correoR) && !empty($passwordR) && !empty($telefono) && !empty($genero) && !empty($nombre_usuario)) {
+        // Verificar si la identificación ya existe en la base de datos
+        $validacionIdentificacion = $link->query("SELECT * FROM tbl_usuario WHERE N_identificacion='$identificacion'");
 
-        if ($validacion->num_rows || $validacionEmpleadoAdmin->num_rows) {
-            echo "<script language='javascript'>alert('El correo ya se encuentra registrado')</script>";
+        if ($validacionIdentificacion->num_rows) {
+            echo "<script language='javascript'>alert('La identificación ya se encuentra registrada')</script>";
         } else {
-            $Guardar = $link->query("INSERT INTO tbl_usuario (Nombres, Genero, Numero) VALUES ('$nombres', '$genero', '$telefono');");
+            $validacionCorreo = $link->query("SELECT * FROM usuarios WHERE Correo='$correoR'");
+            $validacionEmpleadoAdmin = $link->query("SELECT * FROM empleados WHERE Correo='$correoR' AND (FK_rol='33' OR FK_rol='34')");
 
-            if ($Guardar) {
-                $consultar = $link->query("SELECT PK_codigo_us FROM tbl_usuario WHERE Nombres='$nombres'");
-                $fila = mysqli_fetch_row($consultar);
-                $usuario = $fila[0];
+            if ($validacionCorreo->num_rows || $validacionEmpleadoAdmin->num_rows) {
+                echo "<script language='javascript'>alert('El correo ya se encuentra registrado')</script>";
+            } else {
+                $Guardar = $link->query("INSERT INTO tbl_usuario (Nombres, N_identificacion, tp_documento, Genero, Numero) VALUES ('$nombres', '$identificacion', '$tp_documento', '$genero', '$telefono');");
 
-                $hash_newpasswordR = password_hash($passwordR, PASSWORD_DEFAULT);
-                $Guardar2 = $link->query("INSERT INTO usuarios (FK_usuarios, Nombre_usuario, Correo, Contraseña) VALUES ($usuario, '$nombre_usuario', '$correoR', '$hash_newpasswordR');");
+                if ($Guardar) {
+                    $consultar = $link->query("SELECT PK_codigo_us FROM tbl_usuario WHERE Nombres='$nombres'");
+                    $fila = mysqli_fetch_row($consultar);
+                    $usuario = $fila[0];
 
-                if ($Guardar2) {
-                    header('location: Login.php');
-                    exit();
-                } else {
-                    $borrar = $link->query("DELETE FROM tbl_usuario WHERE PK_codigo_us='$usuario'");
+                    $hash_newpasswordR = password_hash($passwordR, PASSWORD_DEFAULT);
+                    $Guardar2 = $link->query("INSERT INTO usuarios (FK_usuarios, Nombre_usuario, Correo, Contraseña) VALUES ($usuario, '$nombre_usuario', '$correoR', '$hash_newpasswordR');");
+
+                    if ($Guardar2) {
+                        echo "<script language='javascript'>alert('Registro exitoso. ¡Ahora puedes iniciar sesión!'); window.location.href='Login.php';</script>";
+                        exit();
+                    } else {
+                        $borrar = $link->query("DELETE FROM tbl_usuario WHERE PK_codigo_us='$usuario'");
+                    }
                 }
             }
         }
@@ -48,6 +59,8 @@ if (isset($_REQUEST['Registrar'])) {
         echo "<script language='javascript'>alert('Complete todos los campos')</script>";
     }
 }
+
+
 
 
 // Función Confirmar
@@ -76,7 +89,7 @@ if (isset($_REQUEST['Confirmar'])) {
                 $_SESSION['usuario'] = $correoL;
                 $_SESSION['Login'] = true;
 
-                header('Location: index.php?user='.$correoL);
+                header('Location: index.php?user=' . $correoL);
                 exit();
             } else {
                 echo "<script language='javascript'>alert('Contraseña incorrecta')</script>";
@@ -91,11 +104,11 @@ if (isset($_REQUEST['Confirmar'])) {
                 $nombreRow = mysqli_fetch_assoc($respuestaE);
                 $nombre = $nombreRow['Correo'];
 
-               include 'includes/session.php';
+                include 'includes/session.php';
                 $_SESSION['usuario'] = $correoL;
                 $_SESSION['Login'] = true;
 
-                header('Location: index.php?user='.$correoL);
+                header('Location: index.php?user=' . $correoL);
             } else {
                 echo "<script language='javascript'>alert('Contraseña incorrecta')</script>";
             }
@@ -143,7 +156,7 @@ if (isset($_REQUEST['Confirmar'])) {
 
                 <div class="collapse navbar-collapse menu" id="navbarNavDropdown">
                     <ul class="navbar-nav">
-                       
+
                         <li class="nav-item">
                             <a class="nav-link" href="servicios.php">Servicios</a>
                         </li>
@@ -206,11 +219,24 @@ if (isset($_REQUEST['Confirmar'])) {
                         <input type="text" name="nombres" required>
                         <label>Nombres</label>
                     </div>
-                    
+
                     <div class="input-box">
                         <span class="icon"><i class='bx bxs-user'></i></span>
                         <input type="text" name="nombreUS" required>
                         <label>Nombre de usuario</label>
+                    </div>
+                    <div class="inputgenero">
+                        <label for="tp_documento">Tipo documento:</label>
+                        <select name="tp_documento" id="tp_documento">
+                            <option value="CC">Cedula Ciudadania</option>
+                            <option value="TI">Tarjeta de Identidad</option>
+                            <option value="CE">Cédula de Extranjería</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class='fa-solid fa-user-lock'></i></span>
+                        <input type="number" name="identificacion" required>
+                        <label>Numero de Documento</label>
                     </div>
                     <div class="input-box">
                         <span class="icon"><i class="fa-regular fa-envelope icon"></i></span>
