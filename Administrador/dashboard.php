@@ -431,7 +431,31 @@ if ($TipoUser == "Admin") {
                                             <td><input type="text" name="Direccion" class="form-control" value="<?php echo $row['Direccion']; ?>"></td>
                                             <td><input type="text" name="Numero" class="form-control" value="<?php echo $row['Numero']; ?>"></td>
                                             <td><input type="text" name="Correo" class="form-control" value="<?php echo $row['Correo']; ?>"></td>
-                                            <td><input type="text" name="Estado" class="form-control" value="<?php echo $row['FK_Estado']; ?>"></td>
+                                            <td>
+                                                <select name="PK_estado" id="PK_estado" class="form-select" style="height: 50px;">
+
+
+                                                    <?php
+
+                                                    $Consultar_estado = $link->query("SELECT * FROM tbl_estado WHERE PK_estado < 3 OR PK_estado > 6");
+
+                                                    while ($row = mysqli_fetch_assoc($Consultar_estado)) {
+
+                                                    ?>
+                                                        <option value="<?php echo $row['PK_estado'] ?>">
+                                                            <?php
+                                                            if (!empty($row['nombre_estado'])) {
+                                                                echo $row['nombre_estado'];
+                                                            }
+                                                            ?>
+
+                                                        </option>
+
+                                                    <?php  } ?>
+
+
+                                                </select>
+                                            </td>
                                             <td>
 
                                                 <button type="submit" class="btn btn-outline-success mb-2" style="border-radius: 30px;" name="Confirmar" class="btn btn-outline-succes">Confirmar</button>
@@ -463,7 +487,7 @@ if ($TipoUser == "Admin") {
                                         <td><?php echo $row['Direccion']; ?></td>
                                         <td><?php echo $row['Numero']; ?></td>
                                         <td><?php echo $row['Correo']; ?></td>
-                                        <td><?php echo $row['FK_Estado']; ?></td>
+                                        <td><?php echo $row['nombre_estado']; ?></td>
                                         <td>
                                             <a href="dashboard.php?Actualizar=true&id=<?php echo $id; ?>" class="btn btn-outline-info mb-2" style="border-radius: 100%;">
                                                 <i class="fa-solid fa-pen"></i>
@@ -663,7 +687,7 @@ if ($TipoUser == "Admin") {
 
                                         <td><?php echo $row['Nombres']; ?></td>
                                         <td><?php echo $row['Nombre_usuario']; ?></td>
-                                        <td><?php echo $row['tp_documento']; ?></td>    
+                                        <td><?php echo $row['tp_documento']; ?></td>
                                         <td><?php echo $row['N_identificacion']; ?></td>
                                         <td><?php echo $row['Correo']; ?></td>
                                         <td><?php echo $row['Numero']; ?></td>

@@ -105,7 +105,7 @@ if (isset($_POST['Confirmar'])) {
     $direccion = $_POST['Direccion'];
     $numero = $_POST['Numero'];
     $correo = $_POST['Correo'];
-    $Estado = $_POST['Estado'];
+    $Estado = $_POST['PK_estado'];
 
     $update = $link->query("UPDATE empleados set Correo ='$correo', FK_Estado = '$Estado' where ID_emp=$id");
     $query = $link->query("UPDATE tbl_personal SET N_identificacion = '$identificacion', Razon_social = '$especialidad', Nombres = '$nombres', Apellidos = '$apellidos', Genero = '$genero', Direccion = '$direccion', Numero = '$numero' WHERE PK_codigo_pe = $codigo");
