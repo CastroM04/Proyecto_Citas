@@ -408,8 +408,9 @@ if ($TipoUser == "Admin") {
 
                             <?php
 
-                            $Consultar = $link->query("SELECT PE.*, EM.* FROM tbl_personal as PE JOIN empleados as EM
-                                            ON (PE.PK_codigo_pe = EM.FK_personal)");
+                            $Consultar = $link->query("SELECT PE.*, EM.*,TE.nombre_estado  FROM tbl_personal as PE JOIN empleados as EM
+                            ON PE.PK_codigo_pe = EM.FK_personal
+                            JOIN tbl_estado as TE ON EM.FK_Estado = TE.PK_estado");
 
 
                             while ($row = mysqli_fetch_assoc($Consultar)) {
