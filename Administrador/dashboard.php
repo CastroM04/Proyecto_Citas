@@ -427,7 +427,17 @@ if ($TipoUser == "Admin") {
                                             <td><input type="text" name="Razon_social" class="form-control" value="<?php echo $row['Razon_social']; ?>"></td>
                                             <td><input type="text" name="Nombres" class="form-control" value="<?php echo $row['Nombres']; ?>"></td>
                                             <td><input type="text" name="Apellidos" class="form-control" value="<?php echo $row['Apellidos']; ?>"></td>
-                                            <td><input type="text" name="Genero" class="form-control" value="<?php echo $row['Genero']; ?>"></td>
+                            
+
+                                        <td>    <select name="Genero" id="Genero" class="form-select" style="height: 50px;width: 200px;">
+                                                    <option value="0">SELECCIONAR</option>
+                                                    <option value="F">FEMENINO</option>
+                                                    <option value="M">MASCULINO</option>
+                                                    <option value="NONE">PREFIERO NO DECIRLO</option>
+                                                </select></td>
+
+
+
                                             <td><input type="text" name="Direccion" class="form-control" value="<?php echo $row['Direccion']; ?>"></td>
                                             <td><input type="text" name="Numero" class="form-control" value="<?php echo $row['Numero']; ?>"></td>
                                             <td><input type="text" name="Correo" class="form-control" value="<?php echo $row['Correo']; ?>"></td>
@@ -643,7 +653,7 @@ if ($TipoUser == "Admin") {
                                             </td>
                                             <td>
 
-                                                <button class="btn btn-outline-success " style="border-radius: 30px;" name="actualizar">
+                                                <button class="btn btn-outline-success mb-2" style="border-radius: 30px;" name="actualizar">
                                                     Actualizar
                                                 </button>
 

@@ -106,10 +106,17 @@ if (isset($_POST['Confirmar'])) {
     $numero = $_POST['Numero'];
     $correo = $_POST['Correo'];
     $Estado = $_POST['Estado'];
-
+    
     $update = $link->query("UPDATE empleados set Correo ='$correo', FK_Estado = '$Estado' where ID_emp=$id");
-    $query = $link->query("UPDATE tbl_personal SET N_identificacion = '$identificacion', Razon_social = '$especialidad', Nombres = '$nombres', Apellidos = '$apellidos', Genero = '$genero', Direccion = '$direccion', Numero = '$numero' WHERE PK_codigo_pe = $codigo");
+    if(empty($genero)){
+        $query = $link->query("UPDATE tbl_personal SET N_identificacion = '$identificacion', Razon_social = '$especialidad', Nombres = '$nombres', Apellidos = '$apellidos', Direccion = '$direccion', Numero = '$numero' WHERE PK_codigo_pe = $codigo");
 
+    }else{
+        $query = $link->query("UPDATE tbl_personal SET N_identificacion = '$identificacion', Razon_social = '$especialidad', Nombres = '$nombres', Apellidos = '$apellidos', Genero = '$genero', Direccion = '$direccion', Numero = '$numero' WHERE PK_codigo_pe = $codigo");
+
+    }
+
+    
 
     //   $_SESSION['message'] = "Datos actualizados exitosamente";
     //   $_SESSION['message_type'] =  'warning';

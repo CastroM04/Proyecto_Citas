@@ -106,7 +106,7 @@ if ($ADMIN == '33' || $ADMIN == '34') {
                     <ul class="navbar-nav">
                         <li class="nav-item col-sm-12 col-md-2 col-lg-2  ">
 
-                            <a class="navbar-brand" href="index.php">Inicio</a>
+                            <a class="nav-link" href="index.php">Inicio</a>
                         </li>
 
                         <li class="nav-item col-sm-12 col-md-2 col-lg-2 ">
@@ -153,7 +153,7 @@ if ($ADMIN == '33' || $ADMIN == '34') {
                     <?php } else { ?>
 
                     <li class="nav-item">
-                        <a class="nav-link " id="login" aria-current="page" href="Administrador/dashboard.php?User=Adminmessage=!! Bienvenido <?php echo $_SESSION['nombre']; ?> !! &message_type=info">Dashboard</a>
+                        <a class="nav-link " id="login" aria-current="page" href="Administrador/dashboard.php?User=Admin&message=!! Bienvenido <?php echo $_SESSION['nombre']; ?> !! &message_type=info">Dashboard</a>
                     </li>
 
                 <?php } }  ?>
