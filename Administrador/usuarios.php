@@ -57,7 +57,7 @@ if (isset($_POST['actualizar'])) {
     $genero = $_POST['Genero'];
     $tp_documento = $_POST['tp_documento'];
 
-    if ($tp_documento != "0") {
+    if (!empty($id)) {
         $update = $link->query("UPDATE usuarios SET Correo ='$correo', Nombre_usuario='$username' WHERE ID=$id");
         $ConsultarFore = mysqli_fetch_assoc($link->query("SELECT FK_usuarios FROM usuarios WHERE ID =$id"));
         $Codigo = $ConsultarFore['FK_usuarios'];
