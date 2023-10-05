@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-10-2023 a las 18:05:02
+-- Tiempo de generación: 05-10-2023 a las 18:43:08
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.11
 
@@ -480,7 +480,8 @@ ALTER TABLE `tbl_detalleservicio`
 -- Indices de la tabla `tbl_detallesparametro`
 --
 ALTER TABLE `tbl_detallesparametro`
-  ADD PRIMARY KEY (`PK_Codigo_dp`);
+  ADD PRIMARY KEY (`PK_Codigo_dp`),
+  ADD KEY `FK_Codigo_pa` (`FK_Codigo_pa`);
 
 --
 -- Indices de la tabla `tbl_detalle_compra`
@@ -660,6 +661,12 @@ ALTER TABLE `tareas`
 ALTER TABLE `tbl_cita`
   ADD CONSTRAINT `FK_codigo_pe` FOREIGN KEY (`FK_codigo_pe`) REFERENCES `tbl_personal` (`PK_codigo_pe`),
   ADD CONSTRAINT `FK_codigo_se` FOREIGN KEY (`FK_codigo_se`) REFERENCES `tbl_servicio` (`PK_codigo_se`);
+
+--
+-- Filtros para la tabla `tbl_detallesparametro`
+--
+ALTER TABLE `tbl_detallesparametro`
+  ADD CONSTRAINT `FK_Codigo_pa` FOREIGN KEY (`FK_Codigo_pa`) REFERENCES `tbl_parametro` (`PK_Codigo_pa`);
 
 --
 -- Filtros para la tabla `tbl_productos`
