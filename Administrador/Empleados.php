@@ -88,9 +88,7 @@ if (isset($_GET['id']) && $_GET['Eliminar'] == "true") {
 if (isset($_POST['Confirmar'])) {
     $id = $_POST['id'];
 
-    $query = "SELECT  e.*
-    FROM empleados e
-    WHERE ID_emp = $id";
+    $query = "SELECT  * FROM empleados e WHERE ID_emp = $id";
     $resultado = mysqli_query($link, $query);
 
     $info = mysqli_fetch_assoc($resultado);
@@ -109,18 +107,19 @@ if (isset($_POST['Confirmar'])) {
     $Estado = $_POST['PK_estado'];
 
 
-    $update = $link->query("UPDATE empleados set Correo ='$correo', FK_Estado = '$Estado' where ID_emp=$id");
-    if(empty($genero)){
+    $update = $link->query("UPDATE empleados set Correo ='$correo', FK_Estado = '$Estado' where ID_emp= $id");
+
+    if (empty($genero)) {
         $query = $link->query("UPDATE tbl_personal SET N_identificacion = '$identificacion', Razon_social = '$especialidad', Nombres = '$nombres', Apellidos = '$apellidos', Direccion = '$direccion', Numero = '$numero' WHERE PK_codigo_pe = $codigo");
-
-    }else{
+    } else {
         $query = $link->query("UPDATE tbl_personal SET N_identificacion = '$identificacion', Razon_social = '$especialidad', Nombres = '$nombres', Apellidos = '$apellidos', Genero = '$genero', Direccion = '$direccion', Numero = '$numero' WHERE PK_codigo_pe = $codigo");
-
     }
 
-    
+
 
     //   $_SESSION['message'] = "Datos actualizados exitosamente";
     //   $_SESSION['message_type'] =  'warning';
-    header('location:  dashboard.php?message=Los datos han sido actualizados exitosamente&message_type=warning');
+
+      header('location:  dashboard.php?message=Los datos han sido actualizados exitosamente&message_type=warning');
+
 }
