@@ -69,14 +69,18 @@ if (isset($_POST['ActualizarProveedor'])) {
     $emailPr = $_POST['Correo'];
 
     if (!empty($codigo)) {
-        $actualizar = $link->query("UPDATE tbl_proveedor SET N_identificacion='$id', Tipo_id='$Tipo_id', Razon_social='$razonPr', Nombres='$nombrePr', Apellidos='$apellidoPr', Direccion ='$direccionPr',Numero='$telefonoPr' , Correo ='$emailPr' where PK_codigo_pro=$codigo");
+        if (empty($Tipo_id)) {
+            $actualizar = $link->query("UPDATE tbl_proveedor SET N_identificacion='$id', Razon_social='$razonPr', Nombres='$nombrePr', Apellidos='$apellidoPr', Direccion ='$direccionPr',Numero='$telefonoPr' , Correo ='$emailPr' where PK_codigo_pro=$codigo");
+        } else {
+            $actualizar = $link->query("UPDATE tbl_proveedor SET N_identificacion='$id', Tipo_id='$Tipo_id', Razon_social='$razonPr', Nombres='$nombrePr', Apellidos='$apellidoPr', Direccion ='$direccionPr',Numero='$telefonoPr' , Correo ='$emailPr' where PK_codigo_pro=$codigo");
+        }
+
         if ($actualizar) {
             //  $_SESSION['message'] = "Datos editados exitosamente";
             //  $_SESSION['message_type'] = 'warning';
             $_POST['id'] = "";
-            
+
             header("location:dashboard.php?empleados=false&Prov=true&message=Los datos se han actualizado exitosamente&message_type=warning");
         }
     }
 }
-

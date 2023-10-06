@@ -120,8 +120,8 @@ if($PrimaryUser !=""){
                 </span>
                 <div class="data_text" style="margin-left:5px">
 
-                    <span class="name"><?php echo $_SESSION['nombre']; ?></span>
-                    <span class="email"><?php echo $_SESSION['usuario']; ?></span>
+                    <span class="name"><?php echo $_SESSION['nombre']; ?></span> <br>
+                    <span class="email_User"><?php echo $_SESSION['usuario']; ?></span>
                 </div>
             </div>
        

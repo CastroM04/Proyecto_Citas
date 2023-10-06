@@ -187,6 +187,11 @@ if ($TipoUser == "Admin") {
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+        #dashboard {
+            margin-left: 30px;
+        }
+
+
         #Confirmacion {
             display: absolute;
             justify-content: center;
@@ -250,12 +255,51 @@ if ($TipoUser == "Admin") {
             padding: 15px;
         }
 
+        .contenedor-producto {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            /* Agregar espacio entre los elementos dentro del grid */
+        }
+
+        @media screen and (max-width: 1330px) {
+
+            /* Estilos específicos para pantallas más grandes (ejemplo: tabletas) */
+            .contenedor-producto {
+                grid-template-columns: repeat(3, 1fr);
+                /* Mostrar dos elementos por fila */
+            }
+        }
+
+        @media screen and (max-width: 1030px) {
+
+            /* Estilos específicos para pantallas más grandes (ejemplo: tabletas) */
+            .contenedor-producto {
+                grid-template-columns: repeat(2, 1fr);
+                /* Mostrar dos elementos por fila */
+            }
+        }
+
+        @media screen and (max-width: 700px) {
+
+            /* Estilos específicos para pantallas más grandes (ejemplo: tabletas) */
+            .contenedor-producto {
+                justify-items: center;
+                /* Alineación horizontal en el eje principal */
+                align-items: center;
+                grid-template-columns: repeat(1, 1fr);
+                /* Mostrar dos elementos por fila */
+            }
+        }
+
         .contenedor-pro {
             display: inline-flex;
             justify-content: center;
             text-align: center;
             border: 2px solid #f2f2f2;
-            width: 20%;
+            width: 100%;
+            /* Cambiar el ancho al 100% para que se ajuste al contenedor padre */
+            max-width: 300px;
             height: 360px;
             padding: 20px;
             margin-top: 50px;
@@ -377,7 +421,7 @@ if ($TipoUser == "Admin") {
         .content-emp {}
 
 
-        @media screen and (max-width: 1000px) {
+        @media screen and (max-width: 1330px) {
             .Content-seccion {
                 display: none;
             }
@@ -385,8 +429,33 @@ if ($TipoUser == "Admin") {
             .Content-seccion-mobile {
                 display: block;
             }
-        }
 
+            .modal {
+                width: 80%;
+                margin-left: 15%;
+            }
+
+            .sidebar {
+                position: initial;
+                width: 100%;
+                /* Ancho cuando está cerrado */
+                background: #fff;
+
+                z-index: 1000;
+
+            }
+
+            .sidebar:hover {
+                width: 100%;
+
+            }
+
+            body {
+                margin-left: 0;
+            }
+
+
+        }
 
         .Form-looks {
             display: none;
@@ -559,9 +628,14 @@ if ($TipoUser == "Admin") {
                         while ($row = mysqli_fetch_assoc($Consultar)) {
                             $id = $row['ID_emp'];
                         ?>
-
+                            <?php   ?>
                             <button class="btn btn-outline-dark button-mobile mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseObject<?php echo $iterador ?>" aria-expanded="false" aria-controls="collapseObject<?php echo $iterador ?>">
-                                <?php echo $row['Nombres'] . " " . $row['Apellidos']  ?>
+                                <?php echo $row['Nombres'] . " " . $row['Apellidos'] . " / ";
+                                if ($row['FK_rol'] == "33") {
+                                    echo "Administrador";
+                                } else {
+                                    echo "Empleado";
+                                }  ?>
                             </button>
                             </p>
                             <div class="collapse container-fluid" id="collapseObject<?php echo $iterador ?>" style="border: none;">
@@ -733,11 +807,13 @@ if ($TipoUser == "Admin") {
                         if ($con) {
 
                         ?>
+
                             <div class="contenedor-producto">
                                 <?php
                                 while ($producto = mysqli_fetch_assoc($con)) {
 
                                     echo '<div class="contenedor-pro" >';
+
                                     echo '<div class="contenedor" >';
                                     echo '<h3 class="titulo" >' . $producto['Nombre'] . '</h3>';
                                     echo ' <img class="img-item" src="data:image/jpeg;base64, ' . base64_encode($producto['Imagen']) . '" />';
@@ -759,6 +835,7 @@ if ($TipoUser == "Admin") {
                                     <?= '</div>' ?>
                                 <?php } ?>
                             </div>
+
                         <?php
                         }
 
@@ -771,7 +848,7 @@ if ($TipoUser == "Admin") {
                 ?>
                     <button class="btn btn-outline-dark mt-4" onclick="AgregarUsuarios()">Agregar Usuarios</button>
 
-                    <div>
+                    <div class="Content-seccion">
                         <table>
                             <thead>
 
@@ -862,7 +939,7 @@ if ($TipoUser == "Admin") {
                                                 <i class="fa-solid fa-pen"></i>
                                             </a>
 
-                                            <a href="Confirmaciones.php?Confirmacion=true&id=<?php echo $row['PK_codigo_us'] ?>&accion=Eliminar&entidad=EliminarUs&entidad2=usuarios" class="btn btn-outline-danger" style="border-radius: 100%;"><i class="fa-solid fa-xmark"></i></a>
+                                            <a href="Confirmaciones.php?Confirmacion=true&id=<?php echo $row['PK_codigo_us'] ?>&accion=Eliminar&entidad=EliminarUs&entidad2=usuarios" class="btn btn-outline-danger" style="border-radius: 100%;"><i class="fa-solid fa-trash"></i></a>
 
 
                                         </td>
@@ -875,12 +952,152 @@ if ($TipoUser == "Admin") {
                             } ?>
                         </table>
                     </div>
+                    <div class="Content-seccion-mobile ">
+
+                        <?php
+
+                        $iterador = 1;
+
+                        $Consultar = $link->query("SELECT U.ID, TU.Nombres, U.Nombre_usuario, TU.tp_documento, TU.N_identificacion, U.Correo, TU.Numero, TU.Genero, TU.PK_codigo_us
+                        FROM  tbl_usuario as TU
+                        JOIN usuarios AS U ON (TU.PK_codigo_us = U.FK_usuarios)");
+
+
+                        while ($row = mysqli_fetch_assoc($Consultar)) {
+
+                            $nombres = $row['Nombres'];
+                            $username = $row['Nombre_usuario'];
+                            $tp_documento = $row['tp_documento'];
+                            $N_identificacion = $row['N_identificacion'];
+                            $genero = $row['Genero'];
+                            $numero = $row['Numero'];
+                            $correo = $row['Correo'];
+
+                        ?>
+
+                            <button class="btn btn-outline-dark button-mobile mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseObject<?php echo $iterador ?>" aria-expanded="false" aria-controls="collapseObject<?php echo $iterador ?>">
+                                <?php echo  $nombres; ?>
+                            </button>
+                            </p>
+                            <div class="collapse container-fluid" id="collapseObject<?php echo $iterador ?>" style="border: none;">
+                                <div class="row Datos-looks" id="Datos<?php echo $iterador; ?>">
+
+                                    <div class="col-6 mb-3">Tipo documento</div>
+                                    <div class="col-6 "><?php echo $tp_documento; ?></div>
+                                    <div class="col-6 mb-3">Identificacion</div>
+                                    <div class="col-6 "><?php echo $N_identificacion ?></div>
+
+                                    <div class="col-6 mb-3">Correo electrónico</div>
+                                    <div class="col-6 "><?php echo $correo; ?></div>
+                                    <div class="col-6 mb-3">Genero</div>
+                                    <div class="col-6 "><?php echo $genero; ?></div>
+                                    <div class="col-6 mb-3">Numero</div>
+                                    <div class="col-6 "><?php echo $numero; ?></div>
+
+                                    <div class="col-4">
+                                        <button id="FormOpen<?php echo $iterador ?>" class="btn btn-outline-info " style="border-radius: 100%;" onclick="UpdateRe('<?php echo $iterador ?>')">
+                                            <i class="fa-solid fa-pen"></i>
+                                        </button>
+                                        <a href="Confirmaciones.php?Confirmacion=true&id=<?php echo $row['PK_codigo_us'] ?>&accion=Eliminar&entidad=EliminarUs&entidad2=usuarios" class="btn btn-outline-danger" style="border-radius: 100%;"><i class="fa-solid fa-trash"></i></a>
+
+                                    </div>
+
+                                </div>
+                                <form action="usuarios.php?id=<?php echo $row['ID']; ?>" method="post">
+                                    <input type="hidden" name="id" value="<?php echo $id; ?>">
+                                    <div class="row  Form-looks" id="Form<?php echo $iterador; ?>">
+
+
+                                        <div class="col-5 mb-3">Nombres</div>
+                                        <div class="col-6 mb-3"><input type="text" name="Nombres" class="form-control" value="<?php echo $row['Nombres']; ?>"></div>
+                                        <div class="col-5 mb-3">Tipo de documento</div>
+                                        <div class="col-6 mb-3"> <select name="tp_documento" id="tp_documento" class="form-select" style="height: 50px;width: 200px;">
+                                                <option value="0">SELECCIONAR</option>
+                                                <option value="CC">CEDULA CIUDADANIA</option>
+                                                <option value="TI">TARJETA DE IDENTIDAD</option>
+                                                <option value="CE">CEDULA DE EXTRANJERIA</option>
+                                            </select></div>
+
+
+                                        <div class="col-5 mb-3">Identificacion</div>
+                                        <div class="col-6 mb-3"><input type="text" name="N_identificacion" class="form-control" readonly value="<?php echo $row['N_identificacion'] ?>"></div>
+                                        <div class="col-5 mb-3">Correo electrónico</div>
+                                        <div class="col-6 mb-3"><input type="text" name="Correo" class="form-control" value="<?php echo $row['Correo']; ?>"></div>
+                                        <div class="col-5 mb-3">Genero</div>
+                                        <div class="col-6 mb-3"> <select name="Genero" id="Genero" class="form-select" style="height: 50px;width: 200px;">
+                                                <option value="0">SELECCIONAR</option>
+                                                <option value="F">FEMENINO</option>
+                                                <option value="M">MASCULINO</option>
+                                                <option value="NONE">PREFIERO NO DECIRLO</option>
+                                            </select></div>
+                                        <div class="col-5 mb-3">Numero</div>
+                                        <div class="col-6 mb-3"><input type="text" name="Numero" class="form-control" value="<?php echo $row['Numero']; ?>"></div>
+                                        <!--
+                                        <div class="col-5 mb-3">Estado</div>
+                                        <div class="col-6 mb-3">
+                                            <select name="PK_estado" id="PK_estado" class="form-select" style="height: 50px;">
+
+                                                <?php
+                                                /*
+                                                $Consultar_estado = $link->query("SELECT * FROM tbl_estado WHERE PK_estado < 3 OR PK_estado > 6");
+
+                                                while ($row1 = mysqli_fetch_assoc($Consultar_estado)) {
+
+                                                ?>
+                                                    <option value="<?php echo $row1['PK_estado']; ?>">
+                                                        <?php
+                                                        if (!empty($row1['nombre_estado'])) {
+                                                            echo $row1['nombre_estado'];
+                                                        }
+                                                        ?>
+
+                                                    </option>
+
+                                                <?php  }  */ ?>
+
+
+                                            </select>
+
+                                        </div>
+                                        -->
+
+                                        <div class="col-6">
+                                            <button class="btn btn-outline-success mb-2" style="border-radius: 30px;" name="actualizar">
+                                                Actualizar
+                                            </button>
+                                            <a href="javascript:void(0)" class="btn btn-outline-danger" onclick="UpdateRe('<?php echo $iterador ?>')" style="border-radius: 30px;"> Cerrar</a>
+
+                                        </div>
+
+
+
+                                    </div>
+                                </form>
+
+
+
+
+
+                            </div>
+
+
+
+                        <?php $iterador++;
+                        }  ?>
+
+
+                    </div>
+
+
+
+
+
 
                 <?php } else if ($proovedores) { ?>
 
                     <button class="btn btn-outline-dark mt-4" onclick="Proveedor()">Agregar Proveedores</button>
 
-                    <div>
+                    <div class="Content-seccion">
                         <table>
                             <thead>
                                 <td>Codigo</td>
@@ -926,6 +1143,7 @@ if ($TipoUser == "Admin") {
                                             </td>
                                             <td>
                                                 <select name="tipoId" id="tipoId" class="form-select" style="height: 50px;">
+                                                    <option value="">SELECCIONAR</option>
                                                     <option value="30">CEDULA CIUDADANIA</option>
                                                     <option value="32">PASAPORTE</option>
                                                     <option value="31">NIT</option>
@@ -999,6 +1217,109 @@ if ($TipoUser == "Admin") {
 
                             <?php  } ?>
                         </table>
+                    </div>
+                    <div class="Content-seccion-mobile ">
+
+                        <?php
+
+
+                        $iterador = 1;
+                        $Consultar = $link->query("SELECT * FROM tbl_proveedor");
+
+                        while ($row = mysqli_fetch_assoc($Consultar)) {
+
+                            $Ident = $row['PK_codigo_pro'];
+                            $codigo = $row['Tipo_id'];
+                            $Search = $link->query("SELECT Nombre FROM tbl_detallesparametro where PK_codigo_dp =$codigo");
+                            $filas = mysqli_fetch_assoc($Search);
+                            $nombre = $filas['Nombre'];
+                        ?>
+
+                            <button class="btn btn-outline-dark button-mobile mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseObject<?php echo $iterador ?>" aria-expanded="false" aria-controls="collapseObject<?php echo $iterador ?>">
+                                <?php echo $row['Razon_social'] . " / " . $row['Nombres'] . " " . $row['Apellidos']  ?>
+                            </button>
+                            </p>
+                            <div class="collapse container-fluid" id="collapseObject<?php echo $iterador ?>" style="border: none;">
+                                <div class="row Datos-looks" id="Datos<?php echo $iterador; ?>">
+
+                                    <div class="col-6 mb-3">Tipo de identificacion</div>
+                                    <div class="col-6 "><?php echo $nombre ?></div>
+                                    <div class="col-6 mb-3">Identificacion</div>
+                                    <div class="col-6 "><?php echo $row['N_identificacion'] ?></div>
+                                    <div class="col-6 mb-3">Especialidad</div>
+                                    <div class="col-6 "><?php echo $row['Razon_social']; ?></div>
+                                    <div class="col-6 mb-3">Correo electrónico</div>
+                                    <div class="col-6 "><?php echo $row['Correo']; ?></div>
+
+                                    <div class="col-6 mb-3">Direccion</div>
+                                    <div class="col-6 "><?php echo $row['Direccion']; ?></div>
+                                    <div class="col-6 mb-3">Numero</div>
+                                    <div class="col-6 "><?php echo $row['Numero']; ?></div>
+
+                                    <div class="col-4">
+                                        <button id="FormOpen<?php echo $iterador ?>" class="btn btn-outline-info mb-2" style="border-radius: 100%;" onclick="UpdateRe('<?php echo $iterador ?>')">
+                                            <i class="fa-solid fa-pen"></i>
+                                        </button>
+
+                                        <a href="Confirmaciones.php?Confirmacion=true&id=<?php echo $Ident ?>&accion=Eliminar&entidad=Proveedores&entidad2=Prov" class="btn btn-outline-danger" style="border-radius: 100%;"> <i class="fa-solid fa-trash"></i></a>
+
+                                    </div>
+
+                                </div>
+                                <form action="Proveedores.php" method="POST">
+                                    <input type="hidden" name="id" value="<?php echo $id; ?>">
+                                    <div class="row  Form-looks" id="Form<?php echo $iterador; ?>">
+
+                                        <input type="hidden" name="id" value="  <?php echo $row['PK_codigo_pro']; ?>">
+
+                                        <div class="col-5 mb-3">Nombres</div>
+                                        <div class="col-6 mb-3"><input type="text" name="Nombres" class="form-control" value="<?php echo $row['Nombres']; ?>"></div>
+                                        <div class="col-5 mb-3">Apellidos</div>
+                                        <div class="col-6 mb-3"><input type="text" name="Apellidos" class="form-control" value="<?php echo $row['Apellidos']; ?>"></div>
+                                        <div class="col-5 mb-3">Tipo de identificacion</div>
+                                        <div class="col-6 mb-3"> <select name="tipoId" id="tipoId" class="form-select" style="height: 50px;">
+                                                <option value="">SELECCIONAR</option>
+                                                <option value="30">CEDULA CIUDADANIA</option>
+                                                <option value="32">PASAPORTE</option>
+                                                <option value="31">NIT</option>
+                                            </select></div>
+
+                                        <div class="col-5 mb-3">Identificacion</div>
+                                        <div class="col-6 mb-3"><input type="text" name="N_identificacion" class="form-control" readonly value="<?php echo $row['N_identificacion'] ?>"></div>
+                                        <div class="col-5 mb-3">Razon social</div>
+                                        <div class="col-6 mb-3"><input type="text" name="Razon_social" class="form-control" value="<?php echo $row['Razon_social']; ?>"></div>
+                                        <div class="col-5 mb-3">Correo electrónico</div>
+                                        <div class="col-6 mb-3"><input type="text" name="Correo" class="form-control" value="<?php echo $row['Correo']; ?>"></div>
+
+                                        <div class="col-5 mb-3">Direccion</div>
+                                        <div class="col-6 mb-3"><input type="text" name="Direccion" class="form-control" value="<?php echo $row['Direccion']; ?>"></div>
+                                        <div class="col-5 mb-3">Numero</div>
+                                        <div class="col-6 mb-3"><input type="text" name="Numero" class="form-control" value="<?php echo $row['Numero']; ?>"></div>
+
+                                        <div class="col-6">
+                                            <button type="submit" class="btn btn-outline-success mb-2" style="border-radius: 30px;" name="ActualizarProveedor" class="btn btn-outline-succes">Confirmar</button>
+
+                                            <a href="javascript:void(0)" class="btn btn-outline-danger" onclick="UpdateRe('<?php echo $iterador ?>')" style="border-radius: 30px;"> Cerrar</a>
+
+                                        </div>
+
+
+
+                                    </div>
+                                </form>
+
+
+
+
+
+                            </div>
+
+
+
+                        <?php $iterador++;
+                        }  ?>
+
+
                     </div>
 
                 <?php } elseif ($cita) { ?>
