@@ -163,7 +163,13 @@ if ($TipoUser == "Admin") {
 
 
 
-
+if (isset($_GET['Actualizar_object']) && $_GET['Actualizar_object'] == "true") {
+    $Object_Zone = "success";
+    $id_object = $_GET['id'];
+} else {
+    $Object_Zone = "";
+    $id_object = "";
+}
 
 ?>
 
@@ -358,7 +364,8 @@ if ($TipoUser == "Admin") {
             height: 100px;
         }
 
-        .contenedor-pro:hover {
+        .contenedor-pro:hover,
+        .contenedor-pro-update:hover {
             transform: scale(1.1);
         }
 
@@ -463,6 +470,29 @@ if ($TipoUser == "Admin") {
 
         .Datos-looks {
             display: flex;
+        }
+
+        .success {
+            border: 1px solid green;
+
+        }
+
+        .contenedor-pro-update {
+            display: inline-flex;
+            justify-content: center;
+            text-align: center;
+            border: 2px solid green;
+            width: 100%;
+            /* Cambiar el ancho al 100% para que se ajuste al contenedor padre */
+            max-width: 300px;
+            height: 360px;
+            padding: 20px;
+            margin-top: 50px;
+            margin-left: 30px;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 1px 0px green;
+            border-radius: 30px;
+            transition: all 0.1s ease;
         }
     </style>
 </head>
@@ -584,7 +614,9 @@ if ($TipoUser == "Admin") {
 
                                 <?php } else { ?>
 
-                                    <tr>
+                                    <tr class="<?php if (!empty($Object_Zone) && $id_object == $id) {
+                                                    echo $Object_Zone;
+                                                } ?>">
 
                                         <?php
                                         $id = $row['ID_emp'];
@@ -629,7 +661,11 @@ if ($TipoUser == "Admin") {
                             $id = $row['ID_emp'];
                         ?>
                             <?php   ?>
-                            <button class="btn btn-outline-dark button-mobile mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseObject<?php echo $iterador ?>" aria-expanded="false" aria-controls="collapseObject<?php echo $iterador ?>">
+                            <button class="btn btn-outline-<?php if (!empty($Object_Zone) && $id_object == $id) {
+                                                                echo $Object_Zone;
+                                                            } else {
+                                                                echo "dark";
+                                                            } ?> button-mobile mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseObject<?php echo $iterador ?>" aria-expanded="false" aria-controls="collapseObject<?php echo $iterador ?>">
                                 <?php echo $row['Nombres'] . " " . $row['Apellidos'] . " / ";
                                 if ($row['FK_rol'] == "33") {
                                     echo "Administrador";
@@ -811,8 +847,15 @@ if ($TipoUser == "Admin") {
                             <div class="contenedor-producto">
                                 <?php
                                 while ($producto = mysqli_fetch_assoc($con)) {
+                                    $id =  $producto['PK_codigo_pr'];
+                                    if (!empty($Object_Zone) && $id_object == $id) {
+                                        $classes = "contenedor-pro-update";
+                                    } else {
+                                        $classes = "contenedor-pro";
+                                    }
 
-                                    echo '<div class="contenedor-pro" >';
+
+                                    echo '<div class="' . $classes . '" >';
 
                                     echo '<div class="contenedor" >';
                                     echo '<h3 class="titulo" >' . $producto['Nombre'] . '</h3>';
@@ -878,11 +921,11 @@ if ($TipoUser == "Admin") {
                                 $genero = $row['Genero'];
                                 $numero = $row['Numero'];
                                 $correo = $row['Correo'];
-
+                                $id = $row['PK_codigo_us'];
                                 if (isset($_GET['usuariosActualizar']) && $_GET['id'] == $row['ID']) {
 
                             ?>
-                                    <tr>
+                                    <tr class="">
 
                                         <form action="usuarios.php?id=<?php echo $_GET['id']; ?>" method="post">
                                             <td> <input type="text" name="Nombres" class="form-control" value="<?php echo $nombres; ?>" placeholder="Nombres"></td>
@@ -924,7 +967,10 @@ if ($TipoUser == "Admin") {
 
 
                                 <?php } else { ?>
-                                    <tr>
+
+                                    <tr class="<?php if (!empty($Object_Zone) && $id_object == $id) {
+                                                    echo $Object_Zone;
+                                                } ?> ">
 
                                         <td><?php echo $row['Nombres']; ?></td>
                                         <td><?php echo $row['Nombre_usuario']; ?></td>
@@ -964,7 +1010,7 @@ if ($TipoUser == "Admin") {
 
 
                         while ($row = mysqli_fetch_assoc($Consultar)) {
-
+                            $id = $row['PK_codigo_us'];
                             $nombres = $row['Nombres'];
                             $username = $row['Nombre_usuario'];
                             $tp_documento = $row['tp_documento'];
@@ -975,7 +1021,11 @@ if ($TipoUser == "Admin") {
 
                         ?>
 
-                            <button class="btn btn-outline-dark button-mobile mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseObject<?php echo $iterador ?>" aria-expanded="false" aria-controls="collapseObject<?php echo $iterador ?>">
+                            <button class="btn btn-outline-<?php if (!empty($Object_Zone) && $id_object == $id) {
+                                                                echo $Object_Zone;
+                                                            } else {
+                                                                echo 'dark';
+                                                            } ?> button-mobile mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseObject<?php echo $iterador ?>" aria-expanded="false" aria-controls="collapseObject<?php echo $iterador ?>">
                                 <?php echo  $nombres; ?>
                             </button>
                             </p>
@@ -1177,12 +1227,16 @@ if ($TipoUser == "Admin") {
 
                                     </tr>
 
-                                <?php } else { ?>
+                                <?php } else { 
+                                     $Ident = $row['PK_codigo_pro'];
+                                    ?>
 
-                                    <tr>
+                                    <tr class="<?php if (!empty($Object_Zone) && $id_object ==  $Ident) {
+                                                        echo $Object_Zone;
+                                                    } ?>">
                                         <td>
                                             <?php
-                                            $Ident = $row['PK_codigo_pro'];
+                                           
                                             echo $row['PK_codigo_pro'];
                                             ?>
                                         </td>
@@ -1235,7 +1289,9 @@ if ($TipoUser == "Admin") {
                             $nombre = $filas['Nombre'];
                         ?>
 
-                            <button class="btn btn-outline-dark button-mobile mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseObject<?php echo $iterador ?>" aria-expanded="false" aria-controls="collapseObject<?php echo $iterador ?>">
+                            <button class="btn btn-outline-<?php if (!empty($Object_Zone) && $id_object ==  $Ident) {
+                                                        echo $Object_Zone;
+                                                    }else { echo 'dark'; } ?> button-mobile mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseObject<?php echo $iterador ?>" aria-expanded="false" aria-controls="collapseObject<?php echo $iterador ?>">
                                 <?php echo $row['Razon_social'] . " / " . $row['Nombres'] . " " . $row['Apellidos']  ?>
                             </button>
                             </p>
@@ -1327,7 +1383,7 @@ if ($TipoUser == "Admin") {
                         <button class="btn btn-outline-dark mt-4" onclick="Cita()">Agregar cita</button>
                     <?php } ?>
                     <!-- Agregar cita -->
-                    <div>
+                    <div class="Content-seccion">
                         <table>
                             <thead>
                                 <tr>
@@ -1402,7 +1458,9 @@ if ($TipoUser == "Admin") {
                                             </form>
                                         </tr>
                                     <?php } else { ?>
-                                        <tr>
+                                        <tr class="<?php if (!empty($Object_Zone) && $id_object == $id) {
+                                                        echo $Object_Zone;
+                                                    } ?>">
                                             <td><?php echo $row['PK_codigo_ci']; ?></td>
                                             <td><?php echo $row['Descripcion']; ?></td>
                                             <td><?php echo $row['valor_servicio']; ?></td>
@@ -1486,7 +1544,9 @@ if ($TipoUser == "Admin") {
                                         </tr>
 
                                     <?php } else { ?>
-                                        <tr>
+                                        <tr class="<?php if (!empty($Object_Zone) && $id_object == $id) {
+                                                        echo $Object_Zone;
+                                                    } ?>" >
                                             <td><?php echo $row['PK_codigo_ci']; ?></td>
                                             <td><?php echo $row['Descripcion']; ?></td>
                                             <td><?php echo $row['valor_servicio']; ?></td>
@@ -1512,6 +1572,131 @@ if ($TipoUser == "Admin") {
                             <?php }
                             }  ?>
                         </table>
+                    </div>
+                    <div class="Content-seccion-mobile ">
+
+                        <?php
+
+
+                        $iterador = 1;
+
+
+                        $consultaCitas = $link->query("SELECT TC.PK_codigo_ci ,TS.Descripcion, TS.valor_servicio, TU.Nombres AS Nombres_us, TP.Nombres, TC.Fecha_Hora, TE.nombre_estado
+                        FROM tbl_cita AS TC
+                        JOIN tbl_servicio AS TS ON TC.FK_codigo_se = TS.PK_codigo_se
+                        JOIN tbl_usuario AS TU ON TC.N_identificacion = TU.N_identificacion
+                        JOIN tbl_personal AS TP ON TC.FK_codigo_pe = TP.PK_codigo_pe
+                        JOIN tbl_estado AS TE ON TC.Estado_Cita = TE.PK_estado;");
+
+
+
+                        while ($row = mysqli_fetch_assoc($consultaCitas)) {
+                            $id = $row['PK_codigo_ci'];
+
+
+                        ?>
+
+                            <button class="btn btn-outline-<?php if (!empty($Object_Zone) && $id_object == $id) {
+                                                                echo $Object_Zone;
+                                                            } else {
+                                                                echo 'dark';
+                                                            } ?> button-mobile mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseObject<?php echo $iterador ?>" aria-expanded="false" aria-controls="collapseObject<?php echo $iterador ?>">
+                                <?php echo $row['Descripcion'] . " / " . $row['Nombres_us']  ?>
+                            </button>
+                            </p>
+                            <div class="collapsed container-fluid" id="collapseObject<?php echo $iterador ?>" style="border: none;">
+                                <div class="row Datos-looks" id="Datos<?php echo $iterador; ?>">
+
+                                    <div class="col-6 mb-3">Fecha y hora</div>
+                                    <div class="col-6 "><?php echo $row['Fecha_Hora'] ?></div>
+                                    <div class="col-6 mb-3">Nombre Del Empleado</div>
+                                    <div class="col-6 "><?php echo  $row['Nombres'] ?></div>
+                                    <div class="col-6 mb-3">Precio</div>
+                                    <div class="col-6 "><?php echo $row['valor_servicio']; ?></div>
+                                    <div class="col-6 mb-3">Estado de la cita</div>
+                                    <div class="col-6 "><?php echo  $row['nombre_estado']; ?></div>
+
+
+                                    <div class="col-4">
+                                        <button id="FormOpen<?php echo $iterador ?>" class="btn btn-outline-info mb-2" style="border-radius: 100%;" onclick="UpdateRe('<?php echo $iterador ?>')">
+                                            <i class="fa-solid fa-pen"></i>
+                                        </button>
+
+                                        <a href="Confirmaciones.php?Confirmacion=true&id=<?php echo $Ident ?>&accion=Eliminar&entidad=Proveedores&entidad2=Prov" class="btn btn-outline-danger" style="border-radius: 100%;"> <i class="fa-solid fa-trash"></i></a>
+
+                                    </div>
+
+                                </div>
+                                <form action="Citas.php" method="POST">
+                                    <input type="hidden" name="id" value="<?php echo $id; ?>">
+                                    <div class="row  Form-looks" id="Form<?php echo $iterador; ?>">
+
+                                        <input type="hidden" name="id" value="<?php echo $id; ?>">
+
+                                        <div class="col-5 mb-3">Servicio</div>
+                                        <div class="col-6 mb-3"><input type="text" name="Servicio" class="form-control" readonly value="<?php echo $row['Descripcion']; ?>"></div>
+                                        <div class="col-5 mb-3">Precio</div>
+                                        <div class="col-6 mb-3"><input type="text" name="Precio" class="form-control" readonly value="<?php echo $row['valor_servicio']; ?>"></div>
+
+                                        <div class="col-5 mb-3">Empleado</div>
+                                        <div class="col-6 mb-3"><input type="text" name="Nombre_Empleado" class="form-control" readonly value="<?php echo $row['Nombres']; ?>"></div>
+
+                                        <div class="col-5 mb-3">Usuaario</div>
+                                        <div class="col-6 mb-3"><input type="text" name="N_identificacion" class="form-control" readonly value="<?php echo $row['Nombres_us'] ?>"></div>
+                                        <div class="col-5 mb-3">Fecha y hora</div>
+                                        <div class="col-6 mb-3">
+                                            <td><input type="datetime-local" name="Fecha_Hora" class="form-control" value="<?php echo $row['Fecha_Hora']; ?>">
+                                        </div>
+                                        <div class="col-5 mb-3">Estado</div>
+                                        <div class="col-6 mb-3"> <select name="PK_estado" id="FK_codigo_se" class="form-select" style="height: 50px;">
+
+
+                                                <?php
+
+                                                $Consultar_estado = $link->query("SELECT * FROM tbl_estado WHERE PK_estado > 2 AND PK_estado < 7");
+
+                                                while ($row = mysqli_fetch_assoc($Consultar_estado)) {
+
+                                                ?>
+                                                    <option value="<?php echo $row['PK_estado'] ?>">
+                                                        <?php
+                                                        if (!empty($row['nombre_estado'])) {
+                                                            echo $row['nombre_estado'];
+                                                        }
+                                                        ?>
+
+                                                    </option>
+
+                                                <?php  } ?>
+
+
+                                            </select></div>
+
+
+                                        <div class="col-6">
+                                            <button type="submit" class="btn btn-outline-success mb-2" style="border-radius: 30px;" name="Confirmar" class="btn btn-outline-succes">Confirmar</button>
+
+                                            <a href="javascript:void(0)" class="btn btn-outline-danger" onclick="UpdateRe('<?php echo $iterador ?>')" style="border-radius: 30px;"> Cerrar</a>
+
+                                        </div>
+
+
+
+                                    </div>
+                                </form>
+
+
+
+
+
+                            </div>
+
+
+
+                        <?php $iterador++;
+                        }  ?>
+
+
                     </div>
 
                 <?php } ?>

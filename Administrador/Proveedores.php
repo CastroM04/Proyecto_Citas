@@ -80,7 +80,7 @@ if (isset($_POST['ActualizarProveedor'])) {
             //  $_SESSION['message_type'] = 'warning';
             $_POST['id'] = "";
 
-            header("location:dashboard.php?empleados=false&Prov=true&message=Los datos se han actualizado exitosamente&message_type=warning");
+            header("location:dashboard.php?empleados=false&Prov=true&message=Los datos se han actualizado exitosamente&message_type=warning&Actualizar_object=true&id=$codigo");
         }
     }
 }

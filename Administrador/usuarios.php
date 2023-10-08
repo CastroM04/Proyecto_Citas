@@ -85,7 +85,7 @@ if (isset($_POST['actualizar'])) {
 
         }
 
-       header("location: dashboard.php?empleados=false&usuarios=true&message=El usuario se ha actualizado exitosamente&message_type=warning");
+       header("location: dashboard.php?empleados=false&usuarios=true&message=El usuario se ha actualizado exitosamente&message_type=warning&Actualizar_object=true&id=$id");
     } else {
         // Muestra un mensaje de error si no se selecciona una opción válida
         header("location: dashboard.php?empleados=false&usuarios=true");

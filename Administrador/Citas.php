@@ -67,7 +67,7 @@ if (isset($_POST['Confirmar'])) {
         $update = $link->query("UPDATE tbl_cita SET Fecha_Hora = '$Fecha_Hora', Estado_Cita = $PK_estado WHERE PK_codigo_ci = $id");
 
         if ($update) {
-            header("location: dashboard.php?citas=false&citas=true&message=La cita se ha actualizado exitosamente&message_type=warning");
+            header("location: dashboard.php?citas=false&citas=true&message=La cita se ha actualizado exitosamente&message_type=warning&Actualizar_object=true&id=$id");
         } else {
             echo "Error al actualizar la cita: " . $link->error;
         }

@@ -120,6 +120,6 @@ if (isset($_POST['Confirmar'])) {
     //   $_SESSION['message'] = "Datos actualizados exitosamente";
     //   $_SESSION['message_type'] =  'warning';
 
-      header('location:  dashboard.php?message=Los datos han sido actualizados exitosamente&message_type=warning');
+      header("location:  dashboard.php?message=Los datos han sido actualizados exitosamente&message_type=warning&Actualizar_object=true&id=$id");
 
 }

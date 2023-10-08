@@ -65,7 +65,7 @@ if (isset($_POST['Actualizar'])) {
             //  $_SESSION['message_type'] =  'warning';
             $imagen = "";
             $_GET['id'] = "";
-            header("location: dashboard.php?empleados=false&ProductSucces=true&message=El producto se ha actualizado exitosamente&message_type=warning");
+            header("location: dashboard.php?empleados=false&ProductSucces=true&message=El producto se ha actualizado exitosamente&message_type=warning&Actualizar_object=true&id=$codigo");
         }
     } else {
         header("location: dashboard.php");
