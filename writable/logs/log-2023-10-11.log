@@ -1,0 +1,158 @@
+CRITICAL - 2023-10-11 12:21:38 --> Undefined variable: TipoUser
+in APPPATH\Views\principal\header.php on line 59.
+ 1 APPPATH\Views\principal\header.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: TipoUser', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\principal\\header.php', 59, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\principal\\header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('/principal/header', [], true)
+ 5 APPPATH\Controllers\Principal.php(16): view('/principal/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 12:22:09 --> Undefined variable: TipoUser
+in APPPATH\Views\principal\header.php on line 59.
+ 1 APPPATH\Views\principal\header.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: TipoUser', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\principal\\header.php', 59, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\principal\\header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('/principal/header', [], true)
+ 5 APPPATH\Controllers\Principal.php(16): view('/principal/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 12:22:11 --> Undefined variable: TipoUser
+in APPPATH\Views\principal\header.php on line 59.
+ 1 APPPATH\Views\principal\header.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: TipoUser', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\principal\\header.php', 59, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\principal\\header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('/principal/header', [], true)
+ 5 APPPATH\Controllers\Principal.php(16): view('/principal/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 12:22:15 --> Undefined variable: TipoUser
+in APPPATH\Views\principal\header.php on line 59.
+ 1 APPPATH\Views\principal\header.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: TipoUser', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\principal\\header.php', 59, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\principal\\header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('/principal/header', [], true)
+ 5 APPPATH\Controllers\Principal.php(16): view('/principal/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 12:22:15 --> Undefined variable: TipoUser
+in APPPATH\Views\principal\header.php on line 59.
+ 1 APPPATH\Views\principal\header.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: TipoUser', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\principal\\header.php', 59, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\principal\\header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('/principal/header', [], true)
+ 5 APPPATH\Controllers\Principal.php(16): view('/principal/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 12:22:16 --> Undefined variable: TipoUser
+in APPPATH\Views\principal\header.php on line 59.
+ 1 APPPATH\Views\principal\header.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: TipoUser', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\principal\\header.php', 59, [])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\principal\\header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('/principal/header', [], true)
+ 5 APPPATH\Controllers\Servicios.php(21): view('/principal/header')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 12:22:33 --> Undefined variable: _SESSION
+in APPPATH\Views\principal\header.php on line 66.
+ 1 APPPATH\Views\principal\header.php(66): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: _SESSION', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\principal\\header.php', 66, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\principal\\header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('/principal/header', [], true)
+ 5 APPPATH\Controllers\Principal.php(16): view('/principal/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 13:16:51 --> syntax error, unexpected '<'
+in APPPATH\Views\servicios\servicios.php on line 13.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('/servicios/servicios', [], true)
+ 3 APPPATH\Controllers\Servicios.php(22): view('/servicios/servicios', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->index()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 13:26:51 --> Undefined variable: link
+in APPPATH\Views\servicios\servicios.php on line 48.
+ 1 APPPATH\Views\servicios\servicios.php(48): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: link', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\servicios\\servicios.php', 48, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\servicios\\servicios.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('/servicios/servicios', [], true)
+ 5 APPPATH\Controllers\Servicios.php(22): view('/servicios/servicios', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-11 15:07:30 --> mysqli_sql_exception: Column 'Imagen' cannot be null in C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\codel-nighter-Citas\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\codel-nighter-Citas\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\codel-nighter-Citas\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\codel-nighter-Citas\app\Controllers\Servicios.php(37): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(919): App\Controllers\Servicios->insertar()
+#9 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+#10 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\codel-nighter-Citas\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-11 15:07:30 --> Column 'Imagen' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_servicio` (`Descripcion`, `valor_servicio`, `Imagen`) VALUES (:Descripcion:, :valor_servicio:, :Imagen:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Servicios.php(37): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->insertar()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 15:25:34 --> Undefined property: App\Controllers\Servicios::$load
+in APPPATH\Controllers\Servicios.php on line 28.
+ 1 APPPATH\Controllers\Servicios.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Servicios::$load', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Controllers\\Servicios.php', 28, [])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 15:27:19 --> fopen(http://localhost/codel-nighter-Citas/public/img/productos/servicios/index.html): failed to open stream: HTTP wrapper does not support writeable connections
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 188.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(http://localhost/codel-nighter-Citas/public/img/productos/servicios/index.html): failed to open stream: HTTP wrapper does not support writeable connections', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\system\\HTTP\\Files\\UploadedFile.php', 188, [...])
+ 2 SYSTEMPATH\HTTP\Files\UploadedFile.php(188): fopen('http://localhost/codel-nighter-Citas/public/img/productos/servicios/index.html', 'x+b')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(139): CodeIgniter\HTTP\Files\UploadedFile->setPath('http://localhost/codel-nighter-Citas/public/img/productos/servicios/')
+ 4 APPPATH\Controllers\Servicios.php(34): CodeIgniter\HTTP\Files\UploadedFile->move('http://localhost/codel-nighter-Citas/public/img/productos/servicios/')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 15:27:37 --> A non-numeric value encountered
+in APPPATH\Controllers\Servicios.php on line 34.
+ 1 APPPATH\Controllers\Servicios.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Controllers\\Servicios.php', 34, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 15:36:35 --> Undefined index:  	PK_codigo_se
+in APPPATH\Views\servicios\servicios.php on line 23.
+ 1 APPPATH\Views\servicios\servicios.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index:  	PK_codigo_se', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\servicios\\servicios.php', 23, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\servicios\\servicios.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('/servicios/servicios', [], true)
+ 5 APPPATH\Controllers\Servicios.php(22): view('/servicios/servicios', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

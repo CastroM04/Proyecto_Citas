@@ -1,0 +1,385 @@
+ERROR - 2023-10-13 12:12:46 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'cd_procita' in C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'cd_procita', 3306, '', 0)
+#1 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\codel-nighter-Citas\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\codel-nighter-Citas\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\codel-nighter-Citas\app\Controllers\Servicios.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(919): App\Controllers\Servicios->index()
+#8 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+#9 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\codel-nighter-Citas\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'cd_procita' in C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\codel-nighter-Citas\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\codel-nighter-Citas\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\codel-nighter-Citas\app\Controllers\Servicios.php(20): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(919): App\Controllers\Servicios->index()
+#7 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+#8 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codel-nighter-Citas\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-10-13 12:12:46 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'cd_procita'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_servicio`
+WHERE `Estado` = :Estado:', [...], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Servicios.php(20): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-13 12:13:04 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'cd_procita' in C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'cd_procita', 3306, '', 0)
+#1 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\codel-nighter-Citas\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\codel-nighter-Citas\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\codel-nighter-Citas\app\Controllers\Servicios.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(919): App\Controllers\Servicios->index()
+#8 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+#9 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\codel-nighter-Citas\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'cd_procita' in C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\codel-nighter-Citas\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\codel-nighter-Citas\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\codel-nighter-Citas\app\Controllers\Servicios.php(20): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(919): App\Controllers\Servicios->index()
+#7 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+#8 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\codel-nighter-Citas\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-10-13 12:13:04 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'cd_procita'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_servicio`
+WHERE `Estado` = :Estado:', [...], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Servicios.php(20): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 12:19:50 --> Return value of CodeIgniter\BaseModel::transformDataToArray() must be of the type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1750.
+ 1 SYSTEMPATH\BaseModel.php(916): CodeIgniter\BaseModel->transformDataToArray('44', 'update')
+ 2 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update([...], '44')
+ 3 APPPATH\Models\ServiciosModel.php(43): CodeIgniter\Model->update([...], '44')
+ 4 APPPATH\Controllers\Servicios.php(55): App\Models\ServiciosModel->desactivar_Servicio('44')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 12:20:33 --> Return value of CodeIgniter\BaseModel::transformDataToArray() must be of the type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1750.
+ 1 SYSTEMPATH\BaseModel.php(916): CodeIgniter\BaseModel->transformDataToArray('44', 'update')
+ 2 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update([...], '44')
+ 3 APPPATH\Models\ServiciosModel.php(43): CodeIgniter\Model->update([...], '44')
+ 4 APPPATH\Controllers\Servicios.php(55): App\Models\ServiciosModel->desactivar_Servicio('44')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 12:21:54 --> Return value of CodeIgniter\BaseModel::transformDataToArray() must be of the type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1750.
+ 1 SYSTEMPATH\BaseModel.php(916): CodeIgniter\BaseModel->transformDataToArray('44', 'update')
+ 2 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update([...], '44')
+ 3 APPPATH\Models\ServiciosModel.php(43): CodeIgniter\Model->update([...], '44')
+ 4 APPPATH\Controllers\Servicios.php(55): App\Models\ServiciosModel->desactivar_Servicio('44')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 12:22:14 --> Return value of CodeIgniter\BaseModel::transformDataToArray() must be of the type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1750.
+ 1 SYSTEMPATH\BaseModel.php(916): CodeIgniter\BaseModel->transformDataToArray('44', 'update')
+ 2 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update([...], '44')
+ 3 APPPATH\Models\ServiciosModel.php(43): CodeIgniter\Model->update([...], '44')
+ 4 APPPATH\Controllers\Servicios.php(55): App\Models\ServiciosModel->desactivar_Servicio('44')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 12:31:52 --> syntax error, unexpected '}'
+in APPPATH\Controllers\Servicios.php on line 59.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Controllers\\Servicios.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Servicios')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Servicios')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Servicios')
+ 5 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Servicios', true)
+ 6 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 14:24:54 --> Too few arguments to function App\Controllers\Servicios::desactivar(), 1 passed in C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php on line 919 and exactly 2 expected
+in APPPATH\Controllers\Servicios.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44')
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 14:27:55 --> Too few arguments to function App\Controllers\Servicios::desactivar(), 1 passed in C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php on line 919 and exactly 2 expected
+in APPPATH\Controllers\Servicios.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('1')
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 14:53:26 --> Call to undefined method App\Controllers\Servicios::find()
+in APPPATH\Controllers\Servicios.php on line 58.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44', '1')
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 14:59:32 --> The route for "Servicios/Se desactivo correctamente" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('Servicios/Se desactivo correctamente')
+ 2 SYSTEMPATH\Common.php(878): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Servicios.php(66): redirect('Servicios/Se desactivo correctamente')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44', '2')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+<<<<<<< HEAD
+CRITICAL - 2023-10-13 15:46:22 --> Undefined variable: message
+in APPPATH\Views\servicios\servicios.php on line 23.
+ 1 APPPATH\Views\servicios\servicios.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: message', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\servicios\\servicios.php', 23, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\servicios\\servicios.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('/servicios/servicios', [], true)
+ 5 APPPATH\Controllers\Servicios.php(31): view('/servicios/servicios', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->Eliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 15:50:20 --> Undefined variable: message
+in APPPATH\Views\servicios\servicios.php on line 14.
+ 1 APPPATH\Views\servicios\servicios.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: message', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\servicios\\servicios.php', 14, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\servicios\\servicios.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('/servicios/servicios', [], true)
+ 5 APPPATH\Controllers\Servicios.php(31): view('/servicios/servicios', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->Eliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 15:51:57 --> A non-numeric value encountered
+in APPPATH\Controllers\Servicios.php on line 71.
+ 1 APPPATH\Controllers\Servicios.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Controllers\\Servicios.php', 71, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44', '2')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 15:51:59 --> A non-numeric value encountered
+in APPPATH\Controllers\Servicios.php on line 71.
+ 1 APPPATH\Controllers\Servicios.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Controllers\\Servicios.php', 71, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44', '2')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 15:52:07 --> A non-numeric value encountered
+in APPPATH\Controllers\Servicios.php on line 71.
+ 1 APPPATH\Controllers\Servicios.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Controllers\\Servicios.php', 71, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44', '2')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 15:52:48 --> A non-numeric value encountered
+in APPPATH\Controllers\Servicios.php on line 71.
+ 1 APPPATH\Controllers\Servicios.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Controllers\\Servicios.php', 71, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44', '1')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 15:53:36 --> Argument 2 passed to view() must be of the type array, string given, called in C:\xampp\htdocs\codel-nighter-Citas\app\Controllers\Servicios.php on line 36
+in SYSTEMPATH\Common.php on line 1176.
+ 1 APPPATH\Controllers\Servicios.php(36): view('/servicios/servicios', 'Se desactivo correctamente')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->message('Se desactivo correctamente')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 15:53:51 --> Argument 2 passed to view() must be of the type array, string given, called in C:\xampp\htdocs\codel-nighter-Citas\app\Controllers\Servicios.php on line 36
+in SYSTEMPATH\Common.php on line 1176.
+ 1 APPPATH\Controllers\Servicios.php(36): view('/servicios/servicios', 'Se activo correctamente')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->message('Se activo correctamente')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 15:55:45 --> Argument 2 passed to view() must be of the type array, string given, called in C:\xampp\htdocs\codel-nighter-Citas\app\Controllers\Servicios.php on line 36
+in SYSTEMPATH\Common.php on line 1176.
+ 1 APPPATH\Controllers\Servicios.php(36): view('/servicios/servicios', 'Se activo correctamente')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->message('Se activo correctamente')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 15:55:47 --> Argument 2 passed to view() must be of the type array, string given, called in C:\xampp\htdocs\codel-nighter-Citas\app\Controllers\Servicios.php on line 36
+in SYSTEMPATH\Common.php on line 1176.
+ 1 APPPATH\Controllers\Servicios.php(36): view('/servicios/servicios', 'Se activo correctamente')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->message('Se activo correctamente')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 15:55:47 --> Argument 2 passed to view() must be of the type array, string given, called in C:\xampp\htdocs\codel-nighter-Citas\app\Controllers\Servicios.php on line 36
+in SYSTEMPATH\Common.php on line 1176.
+ 1 APPPATH\Controllers\Servicios.php(36): view('/servicios/servicios', 'Se activo correctamente')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->message('Se activo correctamente')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 15:55:47 --> Argument 2 passed to view() must be of the type array, string given, called in C:\xampp\htdocs\codel-nighter-Citas\app\Controllers\Servicios.php on line 36
+in SYSTEMPATH\Common.php on line 1176.
+ 1 APPPATH\Controllers\Servicios.php(36): view('/servicios/servicios', 'Se activo correctamente')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->message('Se activo correctamente')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 15:55:47 --> Argument 2 passed to view() must be of the type array, string given, called in C:\xampp\htdocs\codel-nighter-Citas\app\Controllers\Servicios.php on line 36
+in SYSTEMPATH\Common.php on line 1176.
+ 1 APPPATH\Controllers\Servicios.php(36): view('/servicios/servicios', 'Se activo correctamente')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->message('Se activo correctamente')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 15:55:47 --> Argument 2 passed to view() must be of the type array, string given, called in C:\xampp\htdocs\codel-nighter-Citas\app\Controllers\Servicios.php on line 36
+in SYSTEMPATH\Common.php on line 1176.
+ 1 APPPATH\Controllers\Servicios.php(36): view('/servicios/servicios', 'Se activo correctamente')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->message('Se activo correctamente')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 15:56:28 --> The route for "Servicios_mensaje/Se activo correctamente" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('Servicios_mensaje/Se activo correctamente')
+ 2 SYSTEMPATH\Common.php(878): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Servicios.php(71): redirect('Servicios_mensaje/Se activo correctamente')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44', '1')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 15:56:36 --> The route for "Servicios_mensaje/Se activo correctamente" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('Servicios_mensaje/Se activo correctamente')
+ 2 SYSTEMPATH\Common.php(878): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Servicios.php(71): redirect('Servicios_mensaje/Se activo correctamente')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44', '1')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 15:58:21 --> A non-numeric value encountered
+in APPPATH\Controllers\Servicios.php on line 71.
+ 1 APPPATH\Controllers\Servicios.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Controllers\\Servicios.php', 71, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44', '1')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 16:00:51 --> A non-numeric value encountered
+in APPPATH\Controllers\Servicios.php on line 73.
+ 1 APPPATH\Controllers\Servicios.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Controllers\\Servicios.php', 73, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44', '1')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 16:01:41 --> Undefined variable: message
+in APPPATH\Views\servicios\servicios.php on line 25.
+ 1 APPPATH\Views\servicios\servicios.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: message', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\servicios\\servicios.php', 25, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\servicios\\servicios.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('/servicios/servicios', [], true)
+ 5 APPPATH\Controllers\Servicios.php(32): view('/servicios/servicios', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->Eliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 16:02:54 --> Undefined variable: message
+in APPPATH\Views\servicios\servicios.php on line 25.
+ 1 APPPATH\Views\servicios\servicios.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: message', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\servicios\\servicios.php', 25, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\servicios\\servicios.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('/servicios/servicios', [], true)
+ 5 APPPATH\Controllers\Servicios.php(32): view('/servicios/servicios', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->Eliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 16:02:54 --> Undefined variable: message
+in APPPATH\Views\servicios\servicios.php on line 25.
+ 1 APPPATH\Views\servicios\servicios.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: message', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\servicios\\servicios.php', 25, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\servicios\\servicios.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('/servicios/servicios', [], true)
+ 5 APPPATH\Controllers\Servicios.php(32): view('/servicios/servicios', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->Eliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 16:02:59 --> Undefined variable: message
+in APPPATH\Views\servicios\servicios.php on line 25.
+ 1 APPPATH\Views\servicios\servicios.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: message', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\servicios\\servicios.php', 25, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\servicios\\servicios.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('/servicios/servicios', [], true)
+ 5 APPPATH\Controllers\Servicios.php(32): view('/servicios/servicios', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->Eliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 16:03:15 --> Undefined variable: message
+in APPPATH\Views\servicios\servicios.php on line 25.
+ 1 APPPATH\Views\servicios\servicios.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: message', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\servicios\\servicios.php', 25, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\servicios\\servicios.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('/servicios/servicios', [], true)
+ 5 APPPATH\Controllers\Servicios.php(32): view('/servicios/servicios', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->Eliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 16:03:16 --> Undefined variable: message
+in APPPATH\Views\servicios\servicios.php on line 25.
+ 1 APPPATH\Views\servicios\servicios.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: message', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\servicios\\servicios.php', 25, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\servicios\\servicios.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('/servicios/servicios', [], true)
+ 5 APPPATH\Controllers\Servicios.php(32): view('/servicios/servicios', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->Eliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-13 16:03:16 --> Undefined variable: message
+in APPPATH\Views\servicios\servicios.php on line 25.
+ 1 APPPATH\Views\servicios\servicios.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: message', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\servicios\\servicios.php', 25, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\servicios\\servicios.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('/servicios/servicios', [], true)
+ 5 APPPATH\Controllers\Servicios.php(32): view('/servicios/servicios', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->Eliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+=======
+>>>>>>> be2e32165c287b8fbd2d70260749c4038a4a6906
+CRITICAL - 2023-10-13 21:33:21 --> syntax error, unexpected token "<<", expecting end of file
+in APPPATH\Config\Routes.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(787): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

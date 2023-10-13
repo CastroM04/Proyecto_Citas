@@ -1,0 +1,721 @@
+CRITICAL - 2023-10-12 16:08:43 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 246.
+ 1 SYSTEMPATH\CodeIgniter.php(246): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(210): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-10-12 16:08:46 --> Uncaught Error: Class "Locale" not found in C:\xampp\htdocs\Proyecto\codel-nighter-Citas\system\Helpers\number_helper.php:136
+Stack trace:
+#0 C:\xampp\htdocs\Proyecto\codel-nighter-Citas\system\Helpers\number_helper.php(55): format_number(10.0, 2, NULL, Array)
+#1 C:\xampp\htdocs\Proyecto\codel-nighter-Citas\system\Debug\BaseExceptionHandler.php(145): number_to_size(10.0, 2)
+#2 C:\xampp\htdocs\Proyecto\codel-nighter-Citas\app\Views\errors\html\error_exception.php(360): CodeIgniter\Debug\BaseExceptionHandler::describeMemory(10485760)
+#3 C:\xampp\htdocs\Proyecto\codel-nighter-Citas\system\Debug\BaseExceptionHandler.php(241): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\Proyecto\codel-nighter-Citas\system\Debug\BaseExceptionHandler.php(244): CodeIgniter\Debug\BaseExceptionHandler->CodeIgniter\Debug\{closure}()
+#5 C:\xampp\htdocs\Proyecto\codel-nighter-Citas\system\Debug\ExceptionHandler.php(109): CodeIgniter\Debug\BaseExceptionHandler->render(Object(CodeIgniter\Exceptions\FrameworkException), 500, 'C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\Proyecto\codel-nighter-Citas\system\Debug\Exceptions.php(146): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Exceptions\FrameworkException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#7 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\FrameworkException))
+#8 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\xampp\htdocs\Proyecto\codel-nighter-Citas\system\CodeIgniter.php(246): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 C:\xampp\htdocs\Proyecto\codel-nighter-Citas\system\CodeIgniter.php(210): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\Proyecto\codel-nighter-Citas\public\index.php(67): CodeIgniter\CodeIgniter->initialize()
+#3 {main}
+in SYSTEMPATH\Helpers\number_helper.php on line 136.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-10-12 14:45:42 --> Undefined variable $var
+in APPPATH\Views\servicios\servicios.php on line 84.
+ 1 APPPATH\Views\servicios\servicios.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $var', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\servicios\\servicios.php', 84)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Views\\servicios\\servicios.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('/servicios/servicios', [], true)
+ 5 APPPATH\Controllers\Servicios.php(22): view('/servicios/servicios', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-12 14:49:43 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1724.
+ 1 SYSTEMPATH\BaseModel.php(1724): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(916): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Servicios.php(53): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-12 14:51:07 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1724.
+ 1 SYSTEMPATH\BaseModel.php(1724): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(916): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Servicios.php(55): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-12 14:51:08 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1724.
+ 1 SYSTEMPATH\BaseModel.php(1724): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(916): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Servicios.php(55): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-12 15:04:03 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1724.
+ 1 SYSTEMPATH\BaseModel.php(1724): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(916): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Servicios.php(55): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-12 15:06:28 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1724.
+ 1 SYSTEMPATH\BaseModel.php(1724): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(916): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Servicios.php(55): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-12 17:10:07 --> mysqli_sql_exception: Unknown column 'id_servicio' in 'where clause' in C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\codel-nighter-Citas\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\codel-nighter-Citas\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\codel-nighter-Citas\app\Controllers\Servicios.php(49): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44')
+#8 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+#9 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\codel-nighter-Citas\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-12 17:10:07 --> Unknown column 'id_servicio' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_servicio`
+WHERE `id_servicio` = :id_servicio:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Servicios.php(49): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-12 17:10:51 --> mysqli_sql_exception: Unknown column 'id_servicio' in 'where clause' in C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\codel-nighter-Citas\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\codel-nighter-Citas\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\codel-nighter-Citas\app\Controllers\Servicios.php(49): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('$1')
+#8 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+#9 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\codel-nighter-Citas\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-12 17:10:51 --> Unknown column 'id_servicio' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_servicio`
+WHERE `id_servicio` = :id_servicio:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Servicios.php(49): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('$1')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-12 17:11:02 --> Too few arguments to function App\Controllers\Servicios::desactivar(), 0 passed in C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Servicios.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-12 17:14:21 --> mysqli_sql_exception: Unknown column 'id_servicio' in 'where clause' in C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\codel-nighter-Citas\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\codel-nighter-Citas\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\codel-nighter-Citas\app\Controllers\Servicios.php(49): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44')
+#8 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+#9 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\codel-nighter-Citas\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-12 17:14:21 --> Unknown column 'id_servicio' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_servicio`
+WHERE `id_servicio` = :id_servicio:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Servicios.php(49): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-12 17:14:33 --> mysqli_sql_exception: Unknown column 'id_servicio' in 'where clause' in C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\codel-nighter-Citas\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\codel-nighter-Citas\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\codel-nighter-Citas\app\Controllers\Servicios.php(49): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44')
+#8 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+#9 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\codel-nighter-Citas\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-12 17:14:33 --> Unknown column 'id_servicio' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_servicio`
+WHERE `id_servicio` = :id_servicio:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Servicios.php(49): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-12 17:14:34 --> mysqli_sql_exception: Unknown column 'id_servicio' in 'where clause' in C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\codel-nighter-Citas\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\codel-nighter-Citas\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\codel-nighter-Citas\app\Controllers\Servicios.php(49): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44')
+#8 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+#9 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\codel-nighter-Citas\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-12 17:14:34 --> Unknown column 'id_servicio' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_servicio`
+WHERE `id_servicio` = :id_servicio:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Servicios.php(49): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-12 17:15:06 --> mysqli_sql_exception: Unknown column 'id_servicio' in 'where clause' in C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\codel-nighter-Citas\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\codel-nighter-Citas\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\codel-nighter-Citas\app\Controllers\Servicios.php(49): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('45')
+#8 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+#9 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\codel-nighter-Citas\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-12 17:15:06 --> Unknown column 'id_servicio' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_servicio`
+WHERE `id_servicio` = :id_servicio:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Servicios.php(49): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('45')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-12 17:15:12 --> mysqli_sql_exception: Unknown column 'id_servicio' in 'where clause' in C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\codel-nighter-Citas\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\codel-nighter-Citas\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\codel-nighter-Citas\app\Controllers\Servicios.php(49): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44')
+#8 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+#9 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\codel-nighter-Citas\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-12 17:15:12 --> Unknown column 'id_servicio' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_servicio`
+WHERE `id_servicio` = :id_servicio:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Servicios.php(49): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-12 17:17:47 --> mysqli_sql_exception: Unknown column 'id_servicio' in 'where clause' in C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\codel-nighter-Citas\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\codel-nighter-Citas\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\codel-nighter-Citas\app\Controllers\Servicios.php(49): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44')
+#8 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+#9 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\codel-nighter-Citas\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-12 17:17:47 --> Unknown column 'id_servicio' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_servicio`
+WHERE `id_servicio` = :id_servicio:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Servicios.php(49): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-12 17:19:05 --> mysqli_sql_exception: Unknown column 'id_servicio' in 'where clause' in C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\codel-nighter-Citas\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\codel-nighter-Citas\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\codel-nighter-Citas\app\Controllers\Servicios.php(49): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('45')
+#8 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+#9 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\codel-nighter-Citas\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-12 17:19:05 --> Unknown column 'id_servicio' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_servicio`
+WHERE `id_servicio` = :id_servicio:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Servicios.php(49): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('45')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-12 17:19:10 --> mysqli_sql_exception: Unknown column 'id_servicio' in 'where clause' in C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\codel-nighter-Citas\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\codel-nighter-Citas\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\codel-nighter-Citas\app\Controllers\Servicios.php(49): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44')
+#8 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+#9 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\codel-nighter-Citas\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-12 17:19:10 --> Unknown column 'id_servicio' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_servicio`
+WHERE `id_servicio` = :id_servicio:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Servicios.php(49): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('44')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-12 17:20:57 --> mysqli_sql_exception: Unknown column 'id_servicio' in 'where clause' in C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\codel-nighter-Citas\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\codel-nighter-Citas\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\codel-nighter-Citas\app\Controllers\Servicios.php(49): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('45')
+#8 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+#9 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\codel-nighter-Citas\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-12 17:20:57 --> Unknown column 'id_servicio' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_servicio`
+WHERE `id_servicio` = :id_servicio:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Servicios.php(49): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('45')
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-12 17:44:38 --> Too few arguments to function App\Controllers\Servicios::desactivar(), 0 passed in C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Servicios.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-12 17:47:47 --> Too few arguments to function App\Controllers\Servicios::desactivar(), 0 passed in C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Servicios.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-12 17:48:14 --> Too few arguments to function App\Controllers\Servicios::desactivar(), 0 passed in C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Servicios.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-12 17:48:44 --> Too few arguments to function App\Controllers\Servicios::desactivar(), 0 passed in C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Servicios.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-12 17:49:08 --> Too few arguments to function App\Controllers\Servicios::desactivar(), 0 passed in C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Servicios.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-12 17:49:28 --> Too few arguments to function App\Controllers\Servicios::desactivar(), 0 passed in C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Servicios.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-12 17:50:53 --> Method name must be a string
+in APPPATH\Config\Routes.php on line 11.
+ 1 SYSTEMPATH\Router\RouteCollection.php(339): require()
+ 2 SYSTEMPATH\CodeIgniter.php(787): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 3 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-12 17:52:44 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+AND `tbl_servicio`.`PK_codigo_Se` IN ('tbl_servicio')' at line 2 in C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `tbl_ser...', 0)
+#1 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbl_ser...')
+#2 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbl_ser...')
+#3 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `tbl_ser...', Array, false)
+#4 C:\xampp\htdocs\codel-nighter-Citas\system\Model.php(385): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\codel-nighter-Citas\system\BaseModel.php(949): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\codel-nighter-Citas\system\Model.php(776): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\codel-nighter-Citas\app\Models\ServiciosModel.php(38): CodeIgniter\Model->update('tbl_servicio', Array)
+#8 C:\xampp\htdocs\codel-nighter-Citas\app\Controllers\Servicios.php(51): App\Models\ServiciosModel->desactivar_Servicio(Array)
+#9 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('45')
+#10 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+#11 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\codel-nighter-Citas\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-10-12 17:52:44 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+AND `tbl_servicio`.`PK_codigo_Se` IN ('tbl_servicio')' at line 2
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `tbl_servicio` SET `Estado` = :Estado:
+WHERE `PK_codigo_se` = :PK_codigo_se:
+AND `tbl_servicio`.`PK_codigo_Se` IN :tbl_servicio.PK_codigo_Se:', [...], false)
+ 2 SYSTEMPATH\Model.php(385): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(949): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Models\ServiciosModel.php(38): CodeIgniter\Model->update('tbl_servicio', [...])
+ 6 APPPATH\Controllers\Servicios.php(51): App\Models\ServiciosModel->desactivar_Servicio([])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('45')
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-12 18:17:33 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::last_query()
+in APPPATH\Models\ServiciosModel.php on line 43.
+ 1 APPPATH\Controllers\Servicios.php(47): App\Models\ServiciosModel->desactivar_Servicio(45)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar(45)
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-12 18:26:09 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::getQuery()
+in APPPATH\Models\ServiciosModel.php on line 43.
+ 1 APPPATH\Controllers\Servicios.php(47): App\Models\ServiciosModel->desactivar_Servicio(45)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar(45)
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-12 18:33:27 --> Undefined property: App\Controllers\Servicios::$1
+in APPPATH\Controllers\Servicios.php on line 49.
+ 1 APPPATH\Controllers\Servicios.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Servicios::$1', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Controllers\\Servicios.php', 49)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar(45)
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-12 18:46:46 --> Too few arguments to function App\Controllers\Servicios::desactivar(), 0 passed in C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php on line 919 and exactly 1 expected
+in APPPATH\Controllers\Servicios.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-12 18:47:32 --> Undefined variable $id
+in APPPATH\Controllers\Servicios.php on line 47.
+ 1 APPPATH\Controllers\Servicios.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Controllers\\Servicios.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar('45')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-12 18:53:12 --> The route for "/Servicios" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/Servicios')
+ 2 SYSTEMPATH\Common.php(878): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Servicios.php(57): redirect('/Servicios')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar(44)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-12 18:53:12 --> The route for "/Servicios" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/Servicios')
+ 2 SYSTEMPATH\Common.php(878): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Servicios.php(57): redirect('/Servicios')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar(44)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-12 18:53:12 --> The route for "/Servicios" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/Servicios')
+ 2 SYSTEMPATH\Common.php(878): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Servicios.php(57): redirect('/Servicios')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar(44)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-12 18:53:13 --> The route for "/Servicios" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/Servicios')
+ 2 SYSTEMPATH\Common.php(878): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Servicios.php(57): redirect('/Servicios')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar(44)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-12 18:53:15 --> The route for "/Servicios" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/Servicios')
+ 2 SYSTEMPATH\Common.php(878): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Servicios.php(57): redirect('/Servicios')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar(45)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-12 19:01:17 --> Undefined variable $data
+in APPPATH\Controllers\Servicios.php on line 53.
+ 1 APPPATH\Controllers\Servicios.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Controllers\\Servicios.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar(44)
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-12 19:02:12 --> Deletes are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Database\BaseBuilder.php on line 2766.
+ 1 SYSTEMPATH\Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 2 SYSTEMPATH\BaseModel.php(1080): CodeIgniter\Model->doDelete(null, false)
+ 3 APPPATH\Controllers\Servicios.php(53): CodeIgniter\BaseModel->delete()
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar(44)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-12 19:03:15 --> Object of class App\Models\ServiciosModel could not be converted to int
+in APPPATH\Controllers\Servicios.php on line 55.
+ 1 APPPATH\Controllers\Servicios.php(55): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Object of class App\\Models\\ServiciosModel could not be converted to int', 'C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Controllers\\Servicios.php', 55)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar(44)
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-12 19:04:35 --> mysqli_sql_exception: Unknown column 'id_pais' in 'where clause' in C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `tbl_ser...', 0)
+#1 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_ser...')
+#2 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_ser...')
+#3 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_ser...', Array, false)
+#4 C:\xampp\htdocs\codel-nighter-Citas\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\codel-nighter-Citas\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\codel-nighter-Citas\app\Models\ServiciosModel.php(30): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\codel-nighter-Citas\app\Controllers\Servicios.php(53): App\Models\ServiciosModel->obtener_Servicio(44)
+#8 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(919): App\Controllers\Servicios->desactivar(44)
+#9 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+#10 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\codel-nighter-Citas\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-12 19:04:35 --> Unknown column 'id_pais' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_servicio`.*
+FROM `tbl_servicio`
+WHERE `id_pais` = :id_pais:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\ServiciosModel.php(30): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\Servicios.php(53): App\Models\ServiciosModel->obtener_Servicio(44)
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar(44)
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-12 19:04:40 --> mysqli_sql_exception: Unknown column 'id_pais' in 'where clause' in C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `tbl_ser...', 0)
+#1 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_ser...')
+#2 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_ser...')
+#3 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_ser...', Array, false)
+#4 C:\xampp\htdocs\codel-nighter-Citas\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\codel-nighter-Citas\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\codel-nighter-Citas\app\Models\ServiciosModel.php(30): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\codel-nighter-Citas\app\Controllers\Servicios.php(53): App\Models\ServiciosModel->obtener_Servicio(44)
+#8 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(919): App\Controllers\Servicios->desactivar(44)
+#9 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+#10 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\codel-nighter-Citas\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-12 19:04:40 --> Unknown column 'id_pais' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_servicio`.*
+FROM `tbl_servicio`
+WHERE `id_pais` = :id_pais:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\ServiciosModel.php(30): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\Servicios.php(53): App\Models\ServiciosModel->obtener_Servicio(44)
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar(44)
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-12 19:04:51 --> mysqli_sql_exception: Unknown column 'id_pais' in 'where clause' in C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `tbl_ser...', 0)
+#1 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_ser...')
+#2 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_ser...')
+#3 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_ser...', Array, false)
+#4 C:\xampp\htdocs\codel-nighter-Citas\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\codel-nighter-Citas\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\codel-nighter-Citas\app\Models\ServiciosModel.php(30): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\codel-nighter-Citas\app\Controllers\Servicios.php(53): App\Models\ServiciosModel->obtener_Servicio(44)
+#8 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(919): App\Controllers\Servicios->desactivar(44)
+#9 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+#10 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\codel-nighter-Citas\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-12 19:04:51 --> Unknown column 'id_pais' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_servicio`.*
+FROM `tbl_servicio`
+WHERE `id_pais` = :id_pais:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\ServiciosModel.php(30): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\Servicios.php(53): App\Models\ServiciosModel->obtener_Servicio(44)
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar(44)
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-12 19:06:41 --> mysqli_sql_exception: Unknown column 'id_pais' in 'where clause' in C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `tbl_ser...', 0)
+#1 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_ser...')
+#2 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_ser...')
+#3 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_ser...', Array, false)
+#4 C:\xampp\htdocs\codel-nighter-Citas\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\codel-nighter-Citas\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\codel-nighter-Citas\app\Models\ServiciosModel.php(30): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\codel-nighter-Citas\app\Controllers\Servicios.php(55): App\Models\ServiciosModel->obtener_Servicio(44)
+#8 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(919): App\Controllers\Servicios->desactivar(44)
+#9 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+#10 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\codel-nighter-Citas\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-12 19:06:41 --> Unknown column 'id_pais' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_servicio`.*
+FROM `tbl_servicio`
+WHERE `id_pais` = :id_pais:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\ServiciosModel.php(30): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\Servicios.php(55): App\Models\ServiciosModel->obtener_Servicio(44)
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar(44)
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-12 19:07:01 --> Unclosed '{' on line 10
+in APPPATH\Controllers\Servicios.php on line 61.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\codel-nighter-Citas\\app\\Controllers\\Servicios.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Servicios')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Servicios')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Servicios', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-12 19:07:12 --> mysqli_sql_exception: Unknown column 'id_pais' in 'where clause' in C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\codel-nighter-Citas\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `tbl_ser...', 0)
+#1 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_ser...')
+#2 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_ser...')
+#3 C:\xampp\htdocs\codel-nighter-Citas\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_ser...', Array, false)
+#4 C:\xampp\htdocs\codel-nighter-Citas\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\codel-nighter-Citas\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\codel-nighter-Citas\app\Models\ServiciosModel.php(30): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\codel-nighter-Citas\app\Controllers\Servicios.php(55): App\Models\ServiciosModel->obtener_Servicio(44)
+#8 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(919): App\Controllers\Servicios->desactivar(44)
+#9 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+#10 C:\xampp\htdocs\codel-nighter-Citas\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\codel-nighter-Citas\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-12 19:07:12 --> Unknown column 'id_pais' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_servicio`.*
+FROM `tbl_servicio`
+WHERE `id_pais` = :id_pais:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\ServiciosModel.php(30): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\Servicios.php(55): App\Models\ServiciosModel->obtener_Servicio(44)
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Servicios->desactivar(44)
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Servicios))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

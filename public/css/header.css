@@ -1,0 +1,135 @@
+html {
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,500&display=swap');
+
+* {
+    font-family: "poppins", sans-serif;
+
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: url(../img/Spa.jpg);
+
+}
+
+.Title-logo {
+    display: inline-flex;
+    margin-right: 40px;
+
+}
+
+.spa-logo {
+
+    width: 70px;
+    border-radius: 50%;
+}
+
+.body {
+    background: url(../img/Spa.jpg);
+}
+
+.seccion {
+    padding: 2%;
+}
+
+.seccion-content {
+    background-color: #f2f2f2;
+    border-radius: 30px;
+
+}
+
+
+.contenedor-pro {
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid #f2f2f2;
+    width: 100%;
+    /* Cambiar el ancho al 100% para que se ajuste al contenedor padre */
+    max-width: 300px;
+    height: 360px;
+    padding: 20px;
+    margin-top: 50px;
+    margin-left: 30px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    transition: all 0.1s ease;
+}
+
+.img-item {
+    width: 200px;
+    height: 170px;
+    border-radius: 100px;
+
+}
+
+.container-input {
+    display: inline-flex;
+    border: 2px solid #f2f2f2;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.contenedor-producto {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+
+
+    /* Agregar espacio entre los elementos dentro del grid */
+}
+
+@media screen and (max-width: 992px) {
+
+    header {
+        background: white;
+    }
+}
+
+@media screen and (min-width: 1230px) {
+
+    /* Estilos específicos para pantallas más grandes (ejemplo: tabletas) */
+    .contenedor-producto {
+        grid-template-columns: repeat(4, 1fr);
+        /* Mostrar dos elementos por fila */
+    }
+}
+
+@media screen and (max-width: 1330px) {
+
+    /* Estilos específicos para pantallas más grandes (ejemplo: tabletas) */
+    .contenedor-producto {
+        grid-template-columns: repeat(3, 1fr);
+        /* Mostrar dos elementos por fila */
+    }
+}
+
+@media screen and (max-width: 1030px) {
+
+    /* Estilos específicos para pantallas más grandes (ejemplo: tabletas) */
+    .contenedor-producto {
+        grid-template-columns: repeat(2, 1fr);
+        /* Mostrar dos elementos por fila */
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    /* Estilos específicos para pantallas más grandes (ejemplo: tabletas) */
+    .contenedor-producto {
+        justify-items: center;
+        /* Alineación horizontal en el eje principal */
+        align-items: center;
+        grid-template-columns: repeat(1, 1fr);
+        /* Mostrar dos elementos por fila */
+    }
+}
